@@ -8,7 +8,15 @@
     "noUnusedLocals": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "noEmit": true
+    "noEmit": true,
+    "allowImportingTsExtensions": true
   },
-  "include": ["src", "scripts", "remotion.config.ts"]
+  "include": [
+    "src",
+    "scripts",
+    "packages",
+    "apps",
+    "benchmarks",
+    "remotion.config.ts"
+  ]
 }

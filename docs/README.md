@@ -11,6 +11,10 @@ current pipeline and the Milestone 0 checklist. The v2 documents below are kept 
 | Doc | What it is |
 |---|---|
 | [AI-STICKMAN-ENGINE-PLAN-v3.md](AI-STICKMAN-ENGINE-PLAN-v3.md) | **Current plan (v3.1).** Architecture, world model, assets and art direction, physics and water, SceneSpec v3, quality gates, milestones 0–8, repository layout and reuse map, pilot machine setup, review score |
+| [handoff/RULES.md](handoff/RULES.md) | **Strict rules for every session that continues the build.** Read first. |
+| [handoff/milestone-0.md](handoff/milestone-0.md) to [milestone-4.md](handoff/milestone-4.md) | What each milestone built, why, gate results with rerun commands, bugs found, what needs your review, what is not done |
+| [style-bible.md](style-bible.md) | Draft style bible (awaiting art director approval) |
+| [genre-capabilities.md](genre-capabilities.md) | What the engine can and cannot do for other genres (zombies, end of the world) |
 | [FINAL-PLAN.md](FINAL-PLAN.md) | v2 plan (superseded by v3.1): goal and positioning, architecture, engine design (units, SceneSpec v2, continuity ledger, Character Passport, Prop & Debris Registry, physics tiers incl. drawdown and stranding, Motion Foundry, Plate Studio, render, sound), quality and competitive benchmark, pilot, roadmap, operations, hardware, risks |
 | [00-plan-review.md](00-plan-review.md) | Review of the v1.0 PDF plan: strengths, gaps, reality check vs Kling (why v2 exists) |
 | [01-architecture-v2.md](01-architecture-v2.md) | v2 engine design in more detail |
@@ -19,5 +23,4 @@ current pipeline and the Milestone 0 checklist. The v2 documents below are kept 
 | [04-quality-scorecard.md](04-quality-scorecard.md) | Area scores, programmatic thresholds, benchmark suite, competitive benchmark |
 | [05-asset-specs.md](05-asset-specs.md) | What to generate: character sheets, props, drawdown sets (fish, rocks, wrecked cars, boats, debris), plates, hero clips, motion references |
 
-**Status (23 Oct 2026):** the current engine (`src/story`) renders The Quiet Coast parts 1–3 on the GPU. Milestone 0
-of v3.1 has not started; the new engine will run alongside the current one as npm workspaces (`apps/`, `packages/`).
+**Status (23 Oct 2026):** Milestones 0 to 4 of v3.1 are built and gated (see `handoff/`). The current Quiet Coast engine (`src/story`) is unchanged and still renders parts 1 to 3. The new engine lives in `packages/` and `apps/` as npm workspaces. Run `npm run test:engine` for its tests and `npx tsx apps/engine-cli/src/pilot.mts video` for the pilot clip.

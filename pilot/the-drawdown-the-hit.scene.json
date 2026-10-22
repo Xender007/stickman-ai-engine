@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 3,
+  "sceneId": "the_drawdown_the_hit",
+  "fps": 30,
+  "durationFrames": 875,
+  "seed": "harbor-pilot-002",
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "time": "s"
+  },
+  "coordinates": {
+    "upAxis": "y",
+    "groundPlane": "xz"
+  },
+  "staging": {
+    "profile": "lanes_2_5d@1",
+    "maxCameraYawDeg": 15
+  },
+  "world": "harbor_street@2",
+  "storyTime": {
+    "startSeconds": 0,
+    "endSeconds": 71.14,
+    "mode": "elapsed"
+  },
+  "style": "drawn_survival@1",
+  "artwork": {
+    "allowExternalGeneration": false,
+    "requireApprovedAssets": true
+  },
+  "requiredCapabilities": [
+    "walk_planted_feet@1",
+    "stairs_climb@1",
+    "carry_prop@1",
+    "urban_flood_wet_dry@1",
+    "floating_debris@1",
+    "impact_damage@1",
+    "persistent_world_state@1",
+    "two_clock_timeline@1",
+    "character_in_flood_safety@1",
+    "wet_legs@1",
+    "follow_camera@1",
+    "turn_on_cut@1",
+    "sequence_render_identical@1"
+  ],
+  "simulation": {
+    "rigidBodyEngine": "rapier3d",
+    "rigidStepSeconds": 0.008333333333333333,
+    "waterSolver": "swe_ts@1",
+    "waterField": "harbor_surge_field@1",
+    "coupling": "static_obstacles_and_registered_major_events"
+  },
+  "entities": [
+    {
+      "id": "ravi",
+      "passport": "ravi@1",
+      "lane": "front",
+      "restoreFromState": false
+    },
+    {
+      "id": "box_ravi",
+      "asset": "crate@1",
+      "lane": "front"
+    },
+    {
+      "id": "car_017",
+      "asset": "sedan@3",
+      "lane": "hero"
+    },
+    {
+      "id": "log_003",
+      "asset": "log@1",
+      "lane": "hero"
+    },
+    {
+      "id": "crate_02",
+      "asset": "crate@1",
+      "lane": "hero"
+    },
+    {
+      "id": "gantry_01",
+      "asset": "gantry@1",
+      "lane": "hero"
+    },
+    {
+      "id": "lamp_01",
+      "asset": "lamp@1",
+      "lane": "hero"
+    },
+    {
+      "id": "bollard_01",
+      "asset": "bollard@1",
+      "lane": "hero"
+    },
+    {
+      "id": "bldg_a",
+      "asset": "building@1",
+      "lane": "near"
+    },
+    {
+      "id": "bldg_b",
+      "asset": "building@1",
+      "lane": "near"
+    },
+    {
+      "id": "bldg_c",
+      "asset": "building@1",
+      "lane": "near"
+    }
+  ],
+  "actions": [
+    {
+      "actor": "ravi",
+      "motion": "carry_climb_descend@1",
+      "startFrame": 0
+    }
+  ],
+  "shots": [
+    {
+      "fromFrame": 0,
+      "toFrameExclusive": 150,
+      "camera": "harbor_wide_right@1"
+    },
+    {
+      "fromFrame": 150,
+      "toFrameExclusive": 237,
+      "camera": "harbor_follow@1"
+    },
+    {
+      "fromFrame": 237,
+      "toFrameExclusive": 288,
+      "camera": "harbor_wide@1"
+    },
+    {
+      "fromFrame": 288,
+      "toFrameExclusive": 390,
+      "camera": "harbor_follow@1"
+    },
+    {
+      "fromFrame": 390,
+      "toFrameExclusive": 480,
+      "camera": "harbor_landing@1"
+    },
+    {
+      "fromFrame": 480,
+      "toFrameExclusive": 875,
+      "camera": "harbor_follow@1"
+    }
+  ],
+  "checks": [
+    "persistent_entity_identity",
+    "contact_stability",
+    "water_balance_with_boundary_flux",
+    "damage_and_wetness_continuity",
+    "survivability_depth_velocity"
+  ]
+}

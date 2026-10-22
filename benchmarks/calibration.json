@@ -1,0 +1,112 @@
+{
+  "date": "2026-10-22",
+  "parts": {
+    "part-1": {
+      "duration": 57.8,
+      "captions": {
+        "count": 22,
+        "shortest": 1.2890000000000001,
+        "under_min": 0,
+        "median": 1.811
+      },
+      "loudness": {
+        "lufs": -14.3,
+        "truePeakDb": -0.8,
+        "results": [
+          {
+            "check": "loudness",
+            "pass": true,
+            "value": -14.3,
+            "limit": -14,
+            "detail": "-14.3 LUFS"
+          },
+          {
+            "check": "true_peak",
+            "pass": false,
+            "value": -0.8,
+            "limit": -1,
+            "detail": "-0.8 dBTP"
+          }
+        ]
+      }
+    },
+    "part-2": {
+      "duration": 61.935,
+      "captions": {
+        "count": 32,
+        "shortest": 0.661999999999999,
+        "under_min": 0,
+        "median": 1.4859999999999998
+      },
+      "loudness": {
+        "lufs": -14.8,
+        "truePeakDb": -1,
+        "results": [
+          {
+            "check": "loudness",
+            "pass": true,
+            "value": -14.8,
+            "limit": -14,
+            "detail": "-14.8 LUFS"
+          },
+          {
+            "check": "true_peak",
+            "pass": true,
+            "value": -1,
+            "limit": -1,
+            "detail": "-1.0 dBTP"
+          }
+        ]
+      }
+    },
+    "part-3": {
+      "duration": 88.797,
+      "captions": {
+        "count": 36,
+        "shortest": 0.7430000000000092,
+        "under_min": 0,
+        "median": 1.9969999999999999
+      },
+      "loudness": {
+        "lufs": -14.5,
+        "truePeakDb": -0.7,
+        "results": [
+          {
+            "check": "loudness",
+            "pass": true,
+            "value": -14.5,
+            "limit": -14,
+            "detail": "-14.5 LUFS"
+          },
+          {
+            "check": "true_peak",
+            "pass": false,
+            "value": -0.7,
+            "limit": -1,
+            "detail": "-0.7 dBTP"
+          }
+        ]
+      }
+    }
+  },
+  "scale": {
+    "personPx": 93.24,
+    "floorPx": 130,
+    "measuredRatio": 0.7172307692307692,
+    "intended": 0.5833333333333334,
+    "results": [
+      {
+        "check": "scale_person_to_floor",
+        "pass": false,
+        "value": 0.22953846153846147,
+        "limit": 0.15,
+        "detail": "person_to_floor: ratio 0.717 vs intended 0.583"
+      }
+    ]
+  },
+  "failing": [
+    "scale_person_to_floor",
+    "true_peak",
+    "true_peak"
+  ]
+}
