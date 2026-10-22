@@ -1,0 +1,335 @@
+{
+ "audio": "episodes/the-quiet-coast/part-2.wav",
+ "lines": [
+  {
+   "id": "P2-L01",
+   "text": "The light kept blinking.",
+   "start": 0.6,
+   "end": 1.877
+  },
+  {
+   "id": "P2-L02",
+   "text": "Three short. Three long. Three short.",
+   "start": 2.051,
+   "end": 5.616
+  },
+  {
+   "id": "P2-L03",
+   "text": "Ravi knew that code.",
+   "start": 6.216,
+   "end": 7.702
+  },
+  {
+   "id": "P2-L04",
+   "text": "Every coast-watch volunteer did.",
+   "start": 7.853,
+   "end": 10.129
+  },
+  {
+   "id": "P2-L05",
+   "text": "Someone was calling for help.",
+   "start": 10.732,
+   "end": 12.718
+  },
+  {
+   "id": "P2-L06",
+   "text": "A wooden door drifted past the tower.",
+   "start": 13.217,
+   "end": 15.609
+  },
+  {
+   "id": "P2-L07",
+   "text": "He let go... and dropped onto it.",
+   "start": 15.934,
+   "end": 18.325
+  },
+  {
+   "id": "P2-L08",
+   "text": "He paddled with his bare hands.",
+   "start": 18.725,
+   "end": 20.815
+  },
+  {
+   "id": "P2-L09",
+   "text": "The current dragged him toward the sea.",
+   "start": 20.989,
+   "end": 23.508
+  },
+  {
+   "id": "P2-L10",
+   "text": "A floating car spun past, inches away.",
+   "start": 23.833,
+   "end": 27.595
+  },
+  {
+   "id": "P2-L11",
+   "text": "He kicked free. Kept paddling.",
+   "start": 27.896,
+   "end": 30.45
+  },
+  {
+   "id": "P2-L12",
+   "text": "On the roof, a little girl was waiting.",
+   "start": 31.05,
+   "end": 33.604
+  },
+  {
+   "id": "P2-L13",
+   "text": "A flashlight in one hand. | A radio in the other.",
+   "start": 33.929,
+   "end": 37.227
+  },
+  {
+   "id": "P2-L14",
+   "text": "I'm Mia.",
+   "start": 37.626,
+   "end": 38.288
+  },
+  {
+   "id": "P2-L15",
+   "text": "My dad taught me that code.",
+   "start": 38.613,
+   "end": 40.134
+  },
+  {
+   "id": "P2-L16",
+   "text": "Then the radio crackled.",
+   "start": 40.734,
+   "end": 42.267
+  },
+  {
+   "id": "P2-L17",
+   "text": "Second wave in twenty minutes. Bigger than the first. Get to high ground.",
+   "start": 42.666,
+   "end": 47.542
+  },
+  {
+   "id": "P2-L18",
+   "text": "Ravi looked at the wet line on the wall.",
+   "start": 48.343,
+   "end": 50.688
+  },
+  {
+   "id": "P2-L19",
+   "text": "It reached the edge of her roof.",
+   "start": 50.839,
+   "end": 52.941
+  },
+  {
+   "id": "P2-L20",
+   "text": "Only one building stood taller.",
+   "start": 53.44,
+   "end": 55.367
+  },
+  {
+   "id": "P2-L21",
+   "text": "The harbor tower. Fourteen floors.",
+   "start": 55.495,
+   "end": 58.223
+  },
+  {
+   "id": "P2-L22",
+   "text": "Then the sea began pulling back...",
+   "start": 58.824,
+   "end": 61.935
+  }
+ ],
+ "captions": [
+  {
+   "text": "The light kept blinking.",
+   "start": 0.6,
+   "end": 1.877,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Three short. Three long. Three short.",
+   "start": 2.051,
+   "end": 5.616,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Ravi knew that code.",
+   "start": 6.216,
+   "end": 7.702,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Every coast-watch volunteer did.",
+   "start": 7.853,
+   "end": 10.129,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Someone was calling for help.",
+   "start": 10.732,
+   "end": 12.718,
+   "speaker": "narrator"
+  },
+  {
+   "text": "A wooden door",
+   "start": 13.217,
+   "end": 14.041,
+   "speaker": "narrator"
+  },
+  {
+   "text": "drifted past the tower.",
+   "start": 14.123,
+   "end": 15.609,
+   "speaker": "narrator"
+  },
+  {
+   "text": "He let go...",
+   "start": 15.934,
+   "end": 16.793,
+   "speaker": "narrator"
+  },
+  {
+   "text": "and dropped onto it.",
+   "start": 17.037,
+   "end": 18.325,
+   "speaker": "narrator"
+  },
+  {
+   "text": "He paddled with his bare hands.",
+   "start": 18.725,
+   "end": 20.815,
+   "speaker": "narrator"
+  },
+  {
+   "text": "The current dragged him",
+   "start": 20.989,
+   "end": 22.452,
+   "speaker": "narrator"
+  },
+  {
+   "text": "toward the sea.",
+   "start": 22.51,
+   "end": 23.508,
+   "speaker": "narrator"
+  },
+  {
+   "text": "A floating car",
+   "start": 23.833,
+   "end": 24.762,
+   "speaker": "narrator"
+  },
+  {
+   "text": "spun past, inches away.",
+   "start": 24.878,
+   "end": 27.595,
+   "speaker": "narrator"
+  },
+  {
+   "text": "He kicked free. Kept paddling.",
+   "start": 27.896,
+   "end": 30.45,
+   "speaker": "narrator"
+  },
+  {
+   "text": "On the roof,",
+   "start": 31.05,
+   "end": 31.909,
+   "speaker": "narrator"
+  },
+  {
+   "text": "a little girl was waiting.",
+   "start": 31.99,
+   "end": 33.604,
+   "speaker": "narrator"
+  },
+  {
+   "text": "A flashlight in one hand.",
+   "start": 33.929,
+   "end": 35.624,
+   "speaker": "narrator"
+  },
+  {
+   "text": "A radio in the other.",
+   "start": 35.775,
+   "end": 37.227,
+   "speaker": "narrator"
+  },
+  {
+   "text": "I'm Mia.",
+   "start": 37.626,
+   "end": 38.288,
+   "speaker": "mia"
+  },
+  {
+   "text": "My dad taught me that code.",
+   "start": 38.613,
+   "end": 40.134,
+   "speaker": "mia"
+  },
+  {
+   "text": "Then the radio crackled.",
+   "start": 40.734,
+   "end": 42.267,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Second wave in twenty minutes.",
+   "start": 42.666,
+   "end": 44.419,
+   "speaker": "desk",
+   "variant": "live"
+  },
+  {
+   "text": "Bigger than the first.",
+   "start": 44.802,
+   "end": 45.894,
+   "speaker": "desk",
+   "variant": "live"
+  },
+  {
+   "text": "Get to high ground.",
+   "start": 46.219,
+   "end": 47.542,
+   "speaker": "desk",
+   "variant": "live"
+  },
+  {
+   "text": "Ravi looked at the wet",
+   "start": 48.343,
+   "end": 49.411,
+   "speaker": "narrator"
+  },
+  {
+   "text": "line on the wall.",
+   "start": 49.481,
+   "end": 50.688,
+   "speaker": "narrator"
+  },
+  {
+   "text": "It reached the edge",
+   "start": 50.839,
+   "end": 51.989,
+   "speaker": "narrator"
+  },
+  {
+   "text": "of her roof.",
+   "start": 52.012,
+   "end": 52.941,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Only one building stood taller.",
+   "start": 53.44,
+   "end": 55.367,
+   "speaker": "narrator"
+  },
+  {
+   "text": "The harbor tower. Fourteen floors.",
+   "start": 55.495,
+   "end": 58.223,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Then the sea began pulling back...",
+   "start": 58.824,
+   "end": 61.935,
+   "speaker": "narrator"
+  }
+ ],
+ "duration": 61.935
+}

@@ -1,0 +1,13 @@
+{
+  "title": "The Quiet Coast",
+  "premise": "A night-shift baker survives the night the sea swallowed his city, then follows a signal light inland to find out who else made it, and who knew it was coming.",
+  "hero": {"name": "Ravi", "trait": "keeps going when he is scared"},
+  "world": "A seaside city at the foot of forested hills with an old radio tower.",
+  "parts": 3,
+  "arc": [
+    "The quake and the wave: Ravi survives by climbing the radio tower.",
+    "Following the signal light through a burning, storm-soaked forest to a stranger who knows his name.",
+    "The stranger is the tower's keeper, who saw the wave coming hours early, and why no warning was sent."
+  ],
+  "tone": "tense, cinematic, hopeful by the end"
+}

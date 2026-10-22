@@ -1,0 +1,25 @@
+{
+  "title": "The Light in the Hills",
+  "clock": null,
+  "lines": [
+    "Ravi waited on the roof.", "The light blinked again.", "Three short. Three long.", "It came from the hills.",
+    "He crossed into the forest.", "The forest was burning.", "Smoke. Heat. No birds.",
+    "Then the sky cracked open.", "Rain hit the fire.", "Steam swallowed the path.", "He ran blind through it.",
+    "Something moved behind him.", "Footsteps. Matching his.", "He stopped.", "The footsteps didn't.",
+    "The ground shook again...", "The light was just ahead.",
+    "A door. A lamp. A voice.", "It said his name.", "But nobody here knew Ravi.", "So who was waiting for him?"
+  ],
+  "shots": [
+    {"fromLine": 0, "setting": "flood", "mood": "dawn", "action": "stand", "threat": "none", "camera": "wide", "impact": false},
+    {"fromLine": 4, "setting": "forest", "mood": "disaster", "action": "walk", "threat": "fire", "camera": "track", "impact": false},
+    {"fromLine": 7, "setting": "forest", "mood": "storm", "action": "run", "threat": "storm", "camera": "track", "impact": false},
+    {"fromLine": 11, "setting": "forest", "mood": "storm", "action": "uneasy", "threat": "storm", "camera": "close", "impact": false},
+    {"fromLine": 15, "setting": "hill_tower", "mood": "storm", "action": "run", "threat": "quake", "camera": "wide", "impact": false},
+    {"fromLine": 17, "setting": "hill_tower", "mood": "night", "action": "stand", "threat": "none", "camera": "close", "impact": false}
+  ],
+  "slams": [{"text": "RUN.", "afterLine": 14}],
+  "countdown": null,
+  "summary": "Ravi follows the SOS light through a burning forest and a storm. Footsteps follow him. At the hilltop he finds a lit door and a voice that knows his name, though no one there should know him.",
+  "postCaption": "Someone was waiting for him. Part 2",
+  "hashtags": ["#stickman", "#animated", "#story", "#part2"]
+}

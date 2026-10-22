@@ -1,0 +1,235 @@
+{
+  "episode": {
+    "title": "The Night the Sea Stood Up",
+    "clock": "4:02 AM",
+    "lines": [
+      "Every night at four,",
+      "Ravi opened the bakery.",
+      "Same ovens. Same quiet street.",
+      "Tonight, even the dogs were silent.",
+      "Then the windows hummed...",
+      "The floor rolled under him.",
+      "Every light went dark.",
+      "The street split open...",
+      "Walls folded like paper.",
+      "He didn't stop running.",
+      "Then the sirens started.",
+      "He turned toward the sea.",
+      "The sea was standing up.",
+      "The radio tower. Uphill.",
+      "Eight seconds. Maybe less.",
+      "Climb. Don't look down.",
+      "The wave hit the hill...",
+      "When the water went still,",
+      "Ravi was still holding on.",
+      "The city was gone.",
+      "Then, far away, a light blinked.",
+      "Someone else was alive."
+    ],
+    "shots": [
+      {
+        "fromLine": 0,
+        "setting": "city",
+        "mood": "night",
+        "action": "walk",
+        "threat": "none",
+        "camera": "track",
+        "impact": false
+      },
+      {
+        "fromLine": 4,
+        "setting": "city",
+        "mood": "night",
+        "action": "uneasy",
+        "threat": "quake",
+        "camera": "track",
+        "impact": false
+      },
+      {
+        "fromLine": 7,
+        "setting": "city",
+        "mood": "disaster",
+        "action": "run",
+        "threat": "collapse",
+        "camera": "track",
+        "impact": false
+      },
+      {
+        "fromLine": 10,
+        "setting": "city",
+        "mood": "disaster",
+        "action": "uneasy",
+        "threat": "wave",
+        "camera": "close",
+        "impact": false
+      },
+      {
+        "fromLine": 13,
+        "setting": "hill_tower",
+        "mood": "disaster",
+        "action": "run",
+        "threat": "wave",
+        "camera": "wide",
+        "impact": false
+      },
+      {
+        "fromLine": 15,
+        "setting": "hill_tower",
+        "mood": "disaster",
+        "action": "climb",
+        "threat": "wave",
+        "camera": "wide",
+        "impact": true
+      },
+      {
+        "fromLine": 17,
+        "setting": "flood",
+        "mood": "dawn",
+        "action": "cling",
+        "threat": "none",
+        "camera": "wide",
+        "impact": false
+      }
+    ],
+    "slams": [
+      {
+        "text": "RUN.",
+        "afterLine": 6
+      },
+      {
+        "text": "TSUNAMI.",
+        "afterLine": 11
+      }
+    ],
+    "countdown": {
+      "fromLine": 13,
+      "seconds": 8
+    },
+    "summary": "A quake and a tsunami destroy Ravi's seaside city. He survives by climbing the radio tower on the hill. At dawn the city is underwater, and a light blinks in the distance: someone else is alive.",
+    "postCaption": "He climbed for his life. Then he saw the light. Part 1",
+    "hashtags": [
+      "#stickman",
+      "#animated",
+      "#story",
+      "#part1"
+    ]
+  },
+  "phrases": [
+    {
+      "text": "Every night at four,",
+      "start": 0.35,
+      "end": 1.569
+    },
+    {
+      "text": "Ravi opened the bakery.",
+      "start": 1.72,
+      "end": 3.136
+    },
+    {
+      "text": "Same ovens. Same quiet street.",
+      "start": 3.461,
+      "end": 5.749
+    },
+    {
+      "text": "Tonight, even the dogs were silent.",
+      "start": 6.074,
+      "end": 8.164
+    },
+    {
+      "text": "Then the windows hummed...",
+      "start": 8.605,
+      "end": 9.963
+    },
+    {
+      "text": "The floor rolled under him.",
+      "start": 10.288,
+      "end": 11.879
+    },
+    {
+      "text": "Every light went dark.",
+      "start": 12.088,
+      "end": 13.492
+    },
+    {
+      "text": "The street split open...",
+      "start": 13.771,
+      "end": 15.129
+    },
+    {
+      "text": "Walls folded like paper.",
+      "start": 15.338,
+      "end": 17.022
+    },
+    {
+      "text": "He didn't stop running.",
+      "start": 17.266,
+      "end": 18.427
+    },
+    {
+      "text": "Then the sirens started.",
+      "start": 18.601,
+      "end": 19.925
+    },
+    {
+      "text": "He turned toward the sea.",
+      "start": 20.076,
+      "end": 21.446
+    },
+    {
+      "text": "The sea was standing up.",
+      "start": 21.655,
+      "end": 23.025
+    },
+    {
+      "text": "The radio tower. Uphill.",
+      "start": 23.269,
+      "end": 25.335
+    },
+    {
+      "text": "Eight seconds. Maybe less.",
+      "start": 25.393,
+      "end": 27.367
+    },
+    {
+      "text": "Climb. Don't look down.",
+      "start": 28.063,
+      "end": 29.538
+    },
+    {
+      "text": "The wave hit the hill...",
+      "start": 30.235,
+      "end": 31.744
+    },
+    {
+      "text": "When the water went still,",
+      "start": 33.543,
+      "end": 34.901
+    },
+    {
+      "text": "Ravi was still holding on.",
+      "start": 35.052,
+      "end": 36.596
+    },
+    {
+      "text": "The city was gone.",
+      "start": 36.98,
+      "end": 38.048
+    },
+    {
+      "text": "Then, far away, a light blinked.",
+      "start": 38.431,
+      "end": 40.288
+    },
+    {
+      "text": "Someone else was alive.",
+      "start": 40.672,
+      "end": 42.227
+    }
+  ],
+  "vo": "episodes/the-quiet-coast/part-1.wav",
+  "seed": "the-quiet-coast",
+  "endCard": {
+    "title": "PART 2?",
+    "subtitle": "FOLLOW TO FIND OUT"
+  }
+}

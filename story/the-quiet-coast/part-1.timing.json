@@ -1,0 +1,272 @@
+{
+ "audio": "episodes/the-quiet-coast/part-1.wav",
+ "lines": [
+  {
+   "id": "P1-L01",
+   "text": "Every night at four,",
+   "start": 0.6,
+   "end": 1.889
+  },
+  {
+   "id": "P1-L02",
+   "text": "Ravi opened the bakery.",
+   "start": 2.133,
+   "end": 3.851
+  },
+  {
+   "id": "P1-L03",
+   "text": "Same ovens. Same quiet street.",
+   "start": 4.251,
+   "end": 6.712
+  },
+  {
+   "id": "P1-L04",
+   "text": "Tonight, even the dogs were silent.",
+   "start": 7.095,
+   "end": 9.824
+  },
+  {
+   "id": "P1-L05",
+   "text": "Then the windows hummed...",
+   "start": 10.824,
+   "end": 12.473
+  },
+  {
+   "id": "P1-L06",
+   "text": "The floor rolled under him.",
+   "start": 12.914,
+   "end": 15.096
+  },
+  {
+   "id": "P1-L07",
+   "text": "Every light went dark.",
+   "start": 15.496,
+   "end": 17.168
+  },
+  {
+   "id": "P1-L08",
+   "text": "The street split open...",
+   "start": 18.368,
+   "end": 19.889
+  },
+  {
+   "id": "P1-L09",
+   "text": "Walls folded like paper.",
+   "start": 20.168,
+   "end": 22.014
+  },
+  {
+   "id": "P1-L10",
+   "text": "He didn't stop running.",
+   "start": 22.188,
+   "end": 23.941
+  },
+  {
+   "id": "P1-L11",
+   "text": "Then the sirens started.",
+   "start": 24.341,
+   "end": 26.291
+  },
+  {
+   "id": "P1-L12",
+   "text": "He turned toward the sea.",
+   "start": 27.091,
+   "end": 28.856
+  },
+  {
+   "id": "P1-L13",
+   "text": "The sea was standing up.",
+   "start": 29.256,
+   "end": 30.928
+  },
+  {
+   "id": "P1-L14",
+   "text": "The radio tower. Uphill.",
+   "start": 31.928,
+   "end": 34.622
+  },
+  {
+   "id": "P1-L15",
+   "text": "Eight seconds. Maybe less.",
+   "start": 35.421,
+   "end": 38.207
+  },
+  {
+   "id": "P1-L16",
+   "text": "Climb. Don't look down.",
+   "start": 38.608,
+   "end": 40.28
+  },
+  {
+   "id": "P1-L17",
+   "text": "The wave hit the hill...",
+   "start": 41.079,
+   "end": 42.89
+  },
+  {
+   "id": "P1-L18",
+   "text": "When the water went still,",
+   "start": 44.691,
+   "end": 46.096
+  },
+  {
+   "id": "P1-L19",
+   "text": "Ravi was still holding on.",
+   "start": 46.177,
+   "end": 48.406
+  },
+  {
+   "id": "P1-L20",
+   "text": "The city was gone.",
+   "start": 49.006,
+   "end": 50.817
+  },
+  {
+   "id": "P1-L21",
+   "text": "Then, far away, a light blinked.",
+   "start": 52.017,
+   "end": 55.268
+  },
+  {
+   "id": "P1-L22",
+   "text": "Someone else was alive.",
+   "start": 56.268,
+   "end": 57.801
+  }
+ ],
+ "captions": [
+  {
+   "text": "Every night at four,",
+   "start": 0.6,
+   "end": 1.889,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Ravi opened the bakery.",
+   "start": 2.133,
+   "end": 3.851,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Same ovens. Same quiet street.",
+   "start": 4.251,
+   "end": 6.712,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Tonight, even the dogs were silent.",
+   "start": 7.095,
+   "end": 9.824,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Then the windows hummed...",
+   "start": 10.824,
+   "end": 12.473,
+   "speaker": "narrator"
+  },
+  {
+   "text": "The floor rolled under him.",
+   "start": 12.914,
+   "end": 15.096,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Every light went dark.",
+   "start": 15.496,
+   "end": 17.168,
+   "speaker": "narrator"
+  },
+  {
+   "text": "The street split open...",
+   "start": 18.368,
+   "end": 19.889,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Walls folded like paper.",
+   "start": 20.168,
+   "end": 22.014,
+   "speaker": "narrator"
+  },
+  {
+   "text": "He didn't stop running.",
+   "start": 22.188,
+   "end": 23.941,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Then the sirens started.",
+   "start": 24.341,
+   "end": 26.291,
+   "speaker": "narrator"
+  },
+  {
+   "text": "He turned toward the sea.",
+   "start": 27.091,
+   "end": 28.856,
+   "speaker": "narrator"
+  },
+  {
+   "text": "The sea was standing up.",
+   "start": 29.256,
+   "end": 30.928,
+   "speaker": "narrator"
+  },
+  {
+   "text": "The radio tower. Uphill.",
+   "start": 31.928,
+   "end": 34.622,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Eight seconds. Maybe less.",
+   "start": 35.421,
+   "end": 38.207,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Climb. Don't look down.",
+   "start": 38.608,
+   "end": 40.28,
+   "speaker": "narrator"
+  },
+  {
+   "text": "The wave hit the hill...",
+   "start": 41.079,
+   "end": 42.89,
+   "speaker": "narrator"
+  },
+  {
+   "text": "When the water went still,",
+   "start": 44.691,
+   "end": 46.096,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Ravi was still holding on.",
+   "start": 46.177,
+   "end": 48.406,
+   "speaker": "narrator"
+  },
+  {
+   "text": "The city was gone.",
+   "start": 49.006,
+   "end": 50.817,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Then, far away, a light blinked.",
+   "start": 52.017,
+   "end": 55.268,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Someone else was alive.",
+   "start": 56.268,
+   "end": 57.801,
+   "speaker": "narrator"
+  }
+ ],
+ "duration": 57.8
+}

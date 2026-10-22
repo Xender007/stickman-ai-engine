@@ -1,0 +1,404 @@
+{
+ "audio": "episodes/the-quiet-coast/part-3.wav",
+ "lines": [
+  {
+   "id": "P3-L01",
+   "text": "The water drained out of the streets.",
+   "start": 0.6,
+   "end": 2.945
+  },
+  {
+   "id": "P3-L02",
+   "text": "Fifteen minutes. Maybe less.",
+   "start": 3.386,
+   "end": 6.359
+  },
+  {
+   "id": "P3-L03",
+   "text": "They waded through knee-deep mud.",
+   "start": 6.859,
+   "end": 9.077
+  },
+  {
+   "id": "P3-L04",
+   "text": "Mia slipped. Ravi pulled her up.",
+   "start": 9.518,
+   "end": 12.339
+  },
+  {
+   "id": "P3-L05",
+   "text": "The tower's main door was blocked.",
+   "start": 12.738,
+   "end": 14.781
+  },
+  {
+   "id": "P3-L06",
+   "text": "The fire stairs. Fourteen floors.",
+   "start": 14.863,
+   "end": 17.893
+  },
+  {
+   "id": "P3-L07",
+   "text": "Far out, the horizon turned white.",
+   "start": 18.693,
+   "end": 21.015
+  },
+  {
+   "id": "P3-L08",
+   "text": "“Don't look back,” Ravi said.",
+   "start": 21.456,
+   "end": 23.43
+  },
+  {
+   "id": "P3-L09",
+   "text": "Floor five. Floor six.",
+   "start": 23.93,
+   "end": 26.531
+  },
+  {
+   "id": "P3-L10",
+   "text": "Mia's legs gave out.",
+   "start": 26.831,
+   "end": 28.538
+  },
+  {
+   "id": "P3-L11",
+   "text": "He carried her the rest of the way.",
+   "start": 28.781,
+   "end": 30.871
+  },
+  {
+   "id": "P3-L12",
+   "text": "Floor twelve. The roar arrived.",
+   "start": 31.371,
+   "end": 34.541
+  },
+  {
+   "id": "P3-L13",
+   "text": "They reached the roof as the wave hit.",
+   "start": 34.657,
+   "end": 37.687
+  },
+  {
+   "id": "P3-L14",
+   "text": "Ravi threw himself over Mia.",
+   "start": 38.587,
+   "end": 40.584
+  },
+  {
+   "id": "P3-L15",
+   "text": "The wave exploded against the tower.",
+   "start": 40.642,
+   "end": 42.999
+  },
+  {
+   "id": "P3-L16",
+   "text": "Water climbed past floor after floor...",
+   "start": 43.399,
+   "end": 46.29
+  },
+  {
+   "id": "P3-L17",
+   "text": "and stopped two floors below them.",
+   "start": 46.418,
+   "end": 49.622
+  },
+  {
+   "id": "P3-L18",
+   "text": "Silence.",
+   "start": 50.622,
+   "end": 52.062
+  },
+  {
+   "id": "P3-L19",
+   "text": "They waited. Day one.",
+   "start": 52.961,
+   "end": 55.004
+  },
+  {
+   "id": "P3-L20",
+   "text": "Day two. The water began to fall.",
+   "start": 55.505,
+   "end": 59.127
+  },
+  {
+   "id": "P3-L21",
+   "text": "Day three. Nobody came.",
+   "start": 59.627,
+   "end": 62.924
+  },
+  {
+   "id": "P3-L22",
+   "text": "Then, on the third night, Mia heard something.",
+   "start": 63.924,
+   "end": 66.71
+  },
+  {
+   "id": "P3-L23",
+   "text": "Far away. High in the sky.",
+   "start": 67.211,
+   "end": 69.672
+  },
+  {
+   "id": "P3-L24",
+   "text": "Listen!",
+   "start": 70.172,
+   "end": 70.915
+  },
+  {
+   "id": "P3-L25",
+   "text": "She lifted the flashlight.",
+   "start": 71.315,
+   "end": 73.08
+  },
+  {
+   "id": "P3-L26",
+   "text": "Three short. Three long. Three short.",
+   "start": 73.38,
+   "end": 76.399
+  },
+  {
+   "id": "P3-L27",
+   "text": "A red helicopter broke through the clouds.",
+   "start": 78.698,
+   "end": 81.531
+  },
+  {
+   "id": "P3-L28",
+   "text": "Its searchlight blinked back.",
+   "start": 82.031,
+   "end": 84.028
+  },
+  {
+   "id": "P3-L29",
+   "text": "Same code.",
+   "start": 84.528,
+   "end": 85.968
+  },
+  {
+   "id": "P3-L30",
+   "text": "Help had finally come.",
+   "start": 86.568,
+   "end": 88.797
+  }
+ ],
+ "captions": [
+  {
+   "text": "The water drained out",
+   "start": 0.6,
+   "end": 2.005,
+   "speaker": "narrator"
+  },
+  {
+   "text": "of the streets.",
+   "start": 2.04,
+   "end": 2.945,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Fifteen minutes. Maybe less.",
+   "start": 3.386,
+   "end": 6.359,
+   "speaker": "narrator"
+  },
+  {
+   "text": "They waded through knee-deep mud.",
+   "start": 6.859,
+   "end": 9.077,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Mia slipped. Ravi pulled her up.",
+   "start": 9.518,
+   "end": 12.339,
+   "speaker": "narrator"
+  },
+  {
+   "text": "The tower's main door was blocked.",
+   "start": 12.738,
+   "end": 14.781,
+   "speaker": "narrator"
+  },
+  {
+   "text": "The fire stairs. Fourteen floors.",
+   "start": 14.863,
+   "end": 17.893,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Far out, the horizon turned white.",
+   "start": 18.693,
+   "end": 21.015,
+   "speaker": "narrator"
+  },
+  {
+   "text": "“Don't look back,” Ravi said.",
+   "start": 21.456,
+   "end": 23.43,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Floor five. Floor six.",
+   "start": 23.93,
+   "end": 26.531,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Mia's legs gave out.",
+   "start": 26.831,
+   "end": 28.538,
+   "speaker": "narrator"
+  },
+  {
+   "text": "He carried her the rest",
+   "start": 28.781,
+   "end": 29.931,
+   "speaker": "narrator"
+  },
+  {
+   "text": "of the way.",
+   "start": 29.977,
+   "end": 30.871,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Floor twelve. The roar arrived.",
+   "start": 31.371,
+   "end": 34.541,
+   "speaker": "narrator"
+  },
+  {
+   "text": "They reached the roof",
+   "start": 34.657,
+   "end": 35.702,
+   "speaker": "narrator"
+  },
+  {
+   "text": "as the wave hit.",
+   "start": 35.876,
+   "end": 37.687,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Ravi threw himself over Mia.",
+   "start": 38.587,
+   "end": 40.584,
+   "speaker": "narrator"
+  },
+  {
+   "text": "The wave exploded against the tower.",
+   "start": 40.642,
+   "end": 42.999,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Water climbed past floor after floor...",
+   "start": 43.399,
+   "end": 46.29,
+   "speaker": "narrator"
+  },
+  {
+   "text": "and stopped two floors below them.",
+   "start": 46.418,
+   "end": 49.622,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Silence.",
+   "start": 50.622,
+   "end": 52.062,
+   "speaker": "narrator"
+  },
+  {
+   "text": "They waited. Day one.",
+   "start": 52.961,
+   "end": 55.004,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Day two. The water",
+   "start": 55.505,
+   "end": 57.27,
+   "speaker": "narrator"
+  },
+  {
+   "text": "began to fall.",
+   "start": 57.328,
+   "end": 59.127,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Day three. Nobody came.",
+   "start": 59.627,
+   "end": 62.924,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Then, on the third night,",
+   "start": 63.924,
+   "end": 65.34,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Mia heard something.",
+   "start": 65.364,
+   "end": 66.71,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Far away. High in the sky.",
+   "start": 67.211,
+   "end": 69.672,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Listen!",
+   "start": 70.172,
+   "end": 70.915,
+   "speaker": "mia"
+  },
+  {
+   "text": "She lifted the flashlight.",
+   "start": 71.315,
+   "end": 73.08,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Three short. Three long. Three short.",
+   "start": 73.38,
+   "end": 76.399,
+   "speaker": "narrator"
+  },
+  {
+   "text": "A red helicopter broke",
+   "start": 78.698,
+   "end": 80.149,
+   "speaker": "narrator"
+  },
+  {
+   "text": "through the clouds.",
+   "start": 80.184,
+   "end": 81.531,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Its searchlight blinked back.",
+   "start": 82.031,
+   "end": 84.028,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Same code.",
+   "start": 84.528,
+   "end": 85.968,
+   "speaker": "narrator"
+  },
+  {
+   "text": "Help had finally come.",
+   "start": 86.568,
+   "end": 88.797,
+   "speaker": "narrator"
+  }
+ ],
+ "duration": 88.797
+}

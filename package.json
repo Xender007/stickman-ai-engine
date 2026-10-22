@@ -1,0 +1,28 @@
+{
+  "name": "stickman-story",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio",
+    "make": "tsx --env-file-if-exists=.env scripts/make.ts",
+    "stills": "tsx scripts/stills.ts",
+    "sfx": "python3 scripts/make_sfx.py",
+    "test": "tsx scripts/test.ts && tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/bundler": "^4.0.537",
+    "@remotion/cli": "4.0.537",
+    "@remotion/fonts": "4.0.537",
+    "@remotion/noise": "4.0.537",
+    "@remotion/renderer": "^4.0.537",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remotion": "4.0.537",
+    "zod": "4.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "@types/react": "19.1.8",
+    "tsx": "^4.23.15",
+    "typescript": "5.8.3"
+  }
+}
