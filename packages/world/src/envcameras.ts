@@ -2,7 +2,9 @@ import type { CameraSpec } from './camera.ts';
 
 /** The cameras of the harbor scenes: one source for the Node fixtures, the tests and the video app. */
 const ASPECT = 1080 / 1920;
-export const CAMERAS: Record<'wide' | 'medium' | 'strand' | 'wideRight' | 'follow' | 'landing', CameraSpec> = {
+export const CAMERAS: Record<'wide' | 'medium' | 'strand' | 'wideRight' | 'follow' | 'landing' | 'locked', CameraSpec> = {
+  /** The single locked shot: x from about -2 to 13 m at the front lane, street a third of the way up the frame. */
+  locked: { id: 'harbor_locked@1', pos: [5.6, 5.3, 37.8], fovDeg: 40, aspect: ASPECT },
   wide: { id: 'harbor_wide@1', pos: [8.5, 4.2, 25], fovDeg: 55, aspect: ASPECT },
   medium: { id: 'harbor_medium@1', pos: [8.2, 1.6, 12.5], fovDeg: 50, aspect: ASPECT },
   /** The wide shot shifted right so the stair gantry is in frame (Milestone 4). */

@@ -1,4 +1,9 @@
-# Style bible (DRAFT v0.1, awaiting art director approval)
+# Style bible (DRAFT v0.2, awaiting art director approval)
+
+## 0. The target (set by the art director, 2026-10-23)
+
+**Every video must reach the animation quality of `docs/reference/target-look-harbor-stairs.mp4`** (frames: `target-look-contact-sheet.png`, `target-look-detail.png`). What to match: a painted, detailed 2D world (buildings with windows, chimneys and rails, a stone quay wall, a lamp with a visible light cone), a muted purple-pink dusk sky, flat cartoon water with lighter top bands and white foam outlines, tall white splash columns, water spilling off edges, glossy puddles that reflect the lamp, a clean outlined stick figure, and smooth motion. What *not* to copy from it: floating feet, the crate swapping sides, eyes on a figure specified with no face, a log that never touches what it should.
+
 
 Status: **draft**. Derived from what the current engine already renders (`src/story/world/look.ts`, `src/rig/pose.ts`,
 `src/story/StoryVideo.tsx`) so the new engine starts visually continuous with The Quiet Coast. Nothing here is approved

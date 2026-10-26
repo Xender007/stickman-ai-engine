@@ -4,6 +4,7 @@ import { ThreeCanvas } from '@remotion/three';
 import * as THREE from 'three';
 import { LANES } from '@engine/contracts/src/lanes.ts';
 import { CameraRig } from './CameraRig.tsx';
+import { deterministicSort } from './sortOrder.ts';
 
 export type LaneTracks = {
   fps: number;
@@ -87,7 +88,7 @@ export const Lanes: React.FC<LanesProps> = ({ tracks }) => {
 
   return (
     <AbsoluteFill style={{ background: 'linear-gradient(#3a4358,#8a8fa0)' }}>
-      <ThreeCanvas width={width} height={height} camera={{ position: [camX, 2.4, 17], rotation: [0, 0, 0], fov: 46, near: 0.1, far: 3000 }}>
+      <ThreeCanvas onCreated={({ gl }) => deterministicSort(gl)} width={width} height={height} camera={{ position: [camX, 2.4, 17], rotation: [0, 0, 0], fov: 46, near: 0.1, far: 3000 }}>
         <CameraRig position={[camX, 2.4, 17]} />
         <ambientLight intensity={1.1} />
         <directionalLight position={[-6, 10, 8]} intensity={1.6} />

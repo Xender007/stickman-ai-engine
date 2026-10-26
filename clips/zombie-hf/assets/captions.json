@@ -1,0 +1,127 @@
+{
+ "engine": "kokoro",
+ "captions": [
+  [
+   {
+    "text": "He's alone on floor ten.",
+    "start": 0.794626,
+    "end": 2.621088
+   },
+   {
+    "text": "So who keeps knocking?",
+    "start": 2.621088,
+    "end": 4.119558
+   },
+   {
+    "text": "Day one. The city screamed for six minutes.",
+    "start": 4.119558,
+    "end": 7.4971765
+   },
+   {
+    "text": "Then it went silent.",
+    "start": 7.4971765,
+    "end": 8.649659999999999
+   }
+  ],
+  [
+   {
+    "text": "Everyone thinks the stairs are the safest escape.",
+    "start": 0.771791,
+    "end": 3.7117235
+   },
+   {
+    "text": "They're not. Halfway up, glass tore through his sleeve.",
+    "start": 3.7117235,
+    "end": 7.446949999999999
+   },
+   {
+    "text": "Just a scratch, he thought.",
+    "start": 7.446949999999999,
+    "end": 8.980362999999999
+   }
+  ],
+  [
+   {
+    "text": "Apartment 10-C. He chained the door and jammed a chair under the handle.",
+    "start": 0.727324,
+    "end": 4.828911499999999
+   },
+   {
+    "text": "The stairs above were sealed.",
+    "start": 4.828911499999999,
+    "end": 6.6499095
+   },
+   {
+    "text": "Below him, nine floors of moaning.",
+    "start": 6.6499095,
+    "end": 9.022132
+   }
+  ],
+  [
+   {
+    "text": "Day two. No power.",
+    "start": 0.760635,
+    "end": 1.6092400000000002
+   },
+   {
+    "text": "No signal. He rationed everything.",
+    "start": 1.6092400000000002,
+    "end": 5.096315
+   },
+   {
+    "text": "Two crackers, one sip of water.",
+    "start": 5.096315,
+    "end": 7.25839
+   },
+   {
+    "text": "And counted the hours till night.",
+    "start": 7.25839,
+    "end": 9.054694
+   }
+  ],
+  [
+   {
+    "text": "Night three. Three slow knocks on the door.",
+    "start": 0.772744,
+    "end": 3.7683560000000003
+   },
+   {
+    "text": "He held his breath and pressed his eye to the peephole.",
+    "start": 3.7683560000000003,
+    "end": 6.8256689999999995
+   },
+   {
+    "text": "The corridor was empty.",
+    "start": 6.8256689999999995,
+    "end": 8.612109
+   }
+  ],
+  [
+   {
+    "text": "Then his flashlight found the door.",
+    "start": 0.7736959999999999,
+    "end": 2.7526305
+   },
+   {
+    "text": "Fourteen chalk marks.",
+    "start": 2.7526305,
+    "end": 4.6108955
+   },
+   {
+    "text": "Three crossed out.",
+    "start": 4.6108955,
+    "end": 5.9970064999999995
+   },
+   {
+    "text": "He never drew them.",
+    "start": 5.9970064999999995,
+    "end": 7.145623499999999
+   },
+   {
+    "text": "Someone is counting down.",
+    "start": 7.145623499999999,
+    "end": 8.846009
+   }
+  ]
+ ]
+}

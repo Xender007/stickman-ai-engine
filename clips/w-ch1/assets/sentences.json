@@ -1,0 +1,191 @@
+{
+ "engine": "kokoro",
+ "total": 119.62695833333333,
+ "sentences": [
+  {
+   "text": "Night one.",
+   "start": 0.6,
+   "end": 1.3375416666666666
+  },
+  {
+   "text": "The store intercom says your name.",
+   "start": 1.6375416666666665,
+   "end": 3.697333333333333
+  },
+  {
+   "text": "You are the only person in the building.",
+   "start": 3.9973333333333327,
+   "end": 5.983666666666666
+  },
+  {
+   "text": "It is seven past three in the morning, and you are shelving tins in aisle 5.",
+   "start": 6.283666666666666,
+   "end": 11.03975
+  },
+  {
+   "text": "Then the front doors slide open by themselves.",
+   "start": 11.339749999999999,
+   "end": 14.006625
+  },
+  {
+   "text": "A man is standing there, a regular, here every night at three.",
+   "start": 14.306624999999999,
+   "end": 18.132875
+  },
+  {
+   "text": "Tonight he does not buy his paper and his coffee.",
+   "start": 18.432875,
+   "end": 21.468291666666666
+  },
+  {
+   "text": "He just stands and stares, one fist clenched around something small.",
+   "start": 21.768291666666666,
+   "end": 25.964125
+  },
+  {
+   "text": "The doors keep trying to close on him, and he keeps blocking them.",
+   "start": 26.264125,
+   "end": 30.153541666666666
+  },
+  {
+   "text": "Rhea, the night manager, drives him back outside with a shopping cart and turns the lock.",
+   "start": 30.453541666666666,
+   "end": 36.184125
+  },
+  {
+   "text": "He bumps the glass, steps back, and bumps it again.",
+   "start": 36.484125,
+   "end": 39.525124999999996
+  },
+  {
+   "text": "Up in the office, twelve cameras show the town.",
+   "start": 39.825125,
+   "end": 42.6425
+  },
+  {
+   "text": "On every screen, someone is running.",
+   "start": 42.9425,
+   "end": 44.94858333333334
+  },
+  {
+   "text": "Rhea grabs her keys and her coat.",
+   "start": 45.748583333333336,
+   "end": 47.63758333333334
+  },
+  {
+   "text": "She presses a sealed envelope into your hand.",
+   "start": 47.937583333333336,
+   "end": 50.52820833333334
+  },
+  {
+   "text": "Do not open it before day ten, she says.",
+   "start": 50.828208333333336,
+   "end": 53.350833333333334
+  },
+  {
+   "text": "And not even then, unless you have nothing left to try.",
+   "start": 53.65083333333334,
+   "end": 57.02279166666667
+  },
+  {
+   "text": "Then she is gone, and the doors lock behind her.",
+   "start": 57.322791666666674,
+   "end": 60.26200000000001
+  },
+  {
+   "text": "It is the last human voice you will hear for twelve days.",
+   "start": 60.562000000000005,
+   "end": 63.890375000000006
+  },
+  {
+   "text": "Or so you think.",
+   "start": 64.190375,
+   "end": 65.313625
+  },
+  {
+   "text": "You are alone with 25,000 products and one wall of glass.",
+   "start": 66.113625,
+   "end": 70.56366666666666
+  },
+  {
+   "text": "Problem one: the glass.",
+   "start": 70.86366666666666,
+   "end": 72.38879166666666
+  },
+  {
+   "text": "There is a steel roller shutter, and it needs mains power.",
+   "start": 72.68879166666666,
+   "end": 76.12616666666666
+  },
+  {
+   "text": "If the power dies first, you wind it down by hand.",
+   "start": 76.42616666666666,
+   "end": 79.78554166666666
+  },
+  {
+   "text": "So you wind it down.",
+   "start": 80.08554166666666,
+   "end": 81.373375
+  },
+  {
+   "text": "It takes 35 seconds, and it roars like a freight train.",
+   "start": 81.673375,
+   "end": 85.65299999999999
+  },
+  {
+   "text": "House rule one: nobody comes in.",
+   "start": 85.95299999999999,
+   "end": 88.30866666666665
+  },
+  {
+   "text": "Outside, the regular is still pressed against the steel.",
+   "start": 88.60866666666665,
+   "end": 91.74941666666665
+  },
+  {
+   "text": "In his fist, you finally see it: a small brass key, tagged with a number.",
+   "start": 92.04941666666664,
+   "end": 96.79391666666665
+  },
+  {
+   "text": "Locker twelve.",
+   "start": 97.09391666666664,
+   "end": 98.12737499999997
+  },
+  {
+   "text": "At 5:23, the power goes out.",
+   "start": 98.92737499999998,
+   "end": 101.33370833333332
+  },
+  {
+   "text": "The freezers fall silent.",
+   "start": 101.63370833333332,
+   "end": 103.16829166666665
+  },
+  {
+   "text": "From the back of the store comes a heavy clunk.",
+   "start": 103.46829166666664,
+   "end": 105.86949999999997
+  },
+  {
+   "text": "The fire exit is held shut by a magnet, and magnets need power.",
+   "start": 106.16949999999997,
+   "end": 110.54837499999996
+  },
+  {
+   "text": "You sprint the whole length of the store.",
+   "start": 110.84837499999998,
+   "end": 112.80808333333331
+  },
+  {
+   "text": "You get there too late.",
+   "start": 113.10808333333331,
+   "end": 114.32112499999998
+  },
+  {
+   "text": "The door is open, and wet footprints lead inside.",
+   "start": 114.62112499999998,
+   "end": 117.92695833333332
+  }
+ ]
+}

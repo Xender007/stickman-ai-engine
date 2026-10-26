@@ -4,6 +4,7 @@ import { Lanes, type LanesProps } from './Lanes.tsx';
 import { CarryScene } from './CarryScene.tsx';
 import { carryProps, type CarryProps } from './carryProps.ts';
 import { EnvScene, type EnvProps } from './EnvScene.tsx';
+import { HarborShot, type ShotProps } from './shot/HarborShot.tsx';
 import { buildEnvTimeline } from '../../../packages/world/src/envtimeline.ts';
 import { harborStreet } from '../../../packages/world/src/location.ts';
 import { harborFlood } from '../../../packages/environment/src/flood.ts';
@@ -36,8 +37,11 @@ const harborDefault: EnvProps = {
   }),
 };
 
+const shotDefault: ShotProps = { frames: harborDefault.frames };
+
 export const EngineRoot: React.FC = () => (
   <>
+    <Composition id="HarborShot" component={HarborShot} width={1080} height={1920} fps={30} durationInFrames={shotDefault.frames.length} defaultProps={shotDefault} calculateMetadata={({ props }) => ({ durationInFrames: props.frames.length })} />
     <Composition id="Lanes25D" component={Lanes} width={1080} height={1920} fps={30} durationInFrames={90} defaultProps={defaultProps} />
     <Composition
       id="CarryClip"

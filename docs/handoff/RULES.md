@@ -25,6 +25,8 @@ dated entry in the change log at the bottom, and only when the user asks for it.
   `Math.random`, `useState`-driven animation, refs carrying state between frames, or timers. Randomness comes from a
   seeded generator. `benchmarks/lanes-shuffle.mts` must stay green (shuffled equals ordered).
 - **R8b. Determinism gates must render sequentially.** Isolated stills each get a fresh page and hide state that leaks between frames inside one canvas. React Three Fiber applies the Canvas `camera` prop only once, so a camera driven by that prop freezes per worker chunk; use `CameraRig` (apps/video/src/CameraRig.tsx) for any per-frame camera. Never create Three.js geometry or materials per render: share them at module scope. The gate is `npx tsx apps/engine-cli/src/carry.mts sequence` (sequential PNG render vs isolated stills, bit-identical); it was shown to fail (14 of 15 frames) with the camera rig removed.
+- **R8c. Caches in the video app must be keyed by their content, never by a name alone.** A polygon cache keyed `"lower"` served the dented car's sill to the wrecked car whenever a browser tab happened to render the dented frames first; only the sequence gate caught it (frames 131 onward differed by a 15 x 40 px patch). Also: shared geometry that is rewritten every render (the water strip) must be fully overwritten each time, and `apps/video/src/sortOrder.ts` makes draw-order ties deterministic.
+- **R8d. DOM/SVG scenes are gated by state hash plus frame similarity, not bit identity.** Chrome's 2D rasteriser draws small shapes through a coverage atlas whose layout depends on what the tab drew before, so a few edge pixels of tiny shapes vary between runs with identical content (measured: at most 16 pixels over 8 levels, PSNR 72 dB, on spray droplets), and stills and sequences round DOM colours by one level. For these scenes (`similarity` in `driver.mts`): the state hash must be identical, and every gate frame must reach PSNR >= 60 dB with at most 200 pixels over 8 levels, both between two sequence renders with different worker chunking and against an isolated still. WebGL scenes stay bit-identical (R8b). Never loosen these numbers to pass a scene; a planted frame-order leak must still fail the gate (negative control in `docs/handoff/milestone-4b.md`).
 - **R9. Determinism of bakes.** Fixed step that divides one frame; fixed creation order; no random inputs; identical
   state hash on reruns. Anything stochastic takes a seed from the SceneSpec. Bakes are stored as tracks; render reads tracks.
 - **R10. Units.** Metres, kilograms, seconds, radians; Y up; X/Z ground plane. Convert at the boundary only (legacy
@@ -48,4 +50,6 @@ dated entry in the change log at the bottom, and only when the user asks for it.
 ## Change log
 
 - 2026-10-23: created with Milestone 0.
+- 2026-10-24: added R8d: the SVG shot renderer cannot be bit-stable in Chrome; state hash plus measured similarity instead.
+- 2026-10-23: added R8c after the visual upgrade failed the sequence gate on a name-keyed cache.
 - 2026-10-23: added R8b after Milestone 1 found a frozen-camera bug that isolated-still gates could not see.

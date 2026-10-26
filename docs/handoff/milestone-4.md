@@ -68,12 +68,24 @@ puddle. Output: `out/engine/pilot.mp4`.
 4. **"Depth at the feet" was the wrong quantity on a landing.** It reported 0.6 m of water while he stood 1.8 m above the street. Exposure now uses the submersion of the foot (water surface minus foot height); depth x velocity, the standard danger measure, peaks at 0.045 m^2/s (limit 0.6).
 5. **The turn.** Facing is a one-frame flip and the carried box swaps sides with him (1.0 m). It is built to land on a cut (frame 480), and a test requires that facing changes only on a cut and exactly once.
 
+## Visual upgrade after your first review
+
+Your feedback on the first pilot render: the water animation and the wave were poor, nothing animated when things came into the water, and the car damage was "just a cross mark". All three were fair: the gates prove the state is consistent, not that it looks good, and these were the weak spots I had listed. What changed (all in `apps/video/src`, no change to the simulation):
+
+- **Water** (`Water.tsx`): a smooth surface with a fragment shader instead of blocky columns: depth colour, sunlit skin, flowing streaks that drift with the current, foam that thickens where the water is fast or steep, bubbles in fast water, and a surface chop that travels with the flow. At a bore front there is a curling crest (white lip over a teal body) and spray thrown ahead of it.
+- **Interaction effects** (`fx.ts`, `Water.tsx`): events are now *derived from the simulation* (`envtimeline.ts`, `FxEvent`): the log entering the water, the impact, the crate entering the surge, the log going over the quay, and each of Ravi's footsteps in the film. Each plays ripples, a splash crown of droplets on ballistic arcs and foam clumps; ages use edit time so they read correctly inside a time-lapse.
+- **Car** (`CarModel.tsx`): a real silhouette with three genuinely different bodies. Intact: glass, pillar, door seams, lamps, hubcaps. Dented: crumpled hood, smashed lamp, cracked windscreen with spokes and rings, hanging bumper. Wrecked: front pushed in, hood torn up and folded back, roof dented, glass shattered, a wheel knocked out of its arch, fluid leaking, nose-down tilt.
+- **After the impact:** sparks, glass shards, steam puffs rising for several seconds, the car rocking and settling, camera shake that decays over half a second. When the water is above the window line, bubbles rise from the cabin and the car sways with the surface.
+- **Framing:** the impact shot now uses the medium camera so the damage is readable (it was the wide shot, where the car was a few pixels).
+
+**The upgrade initially broke the determinism gate** (4 of 20 pilot frames, 8 of 16 flood frames, 6 of 14 harbor frames differed from isolated stills by a small patch near the car). Cause: a polygon cache keyed by name only, so the wrecked car could be drawn with the dented car's sill depending on which frame a browser tab rendered first. Fixed by keying the cache on the geometry (rule R8c); a deterministic draw-order tie-break was added as a precaution. All gates were re-run after the fix.
+
 ## Needs your review (rule R7)
 
 This is the milestone where the plan asks for **human acceptance**. Watch `out/engine/pilot.mp4` and tell me, shot by shot, what you accept and what you want changed. What I can see:
 
 - The acting is functional, not expressive: no face, no head turn, no reaction to the surge, the climb is a repeated cycle, the turn is hidden by a cut.
-- The art is placeholder: flat boxes for buildings, blocky foam steps on the water, a dark foreground fill, no lighting, no weather. The style bible is still a draft awaiting your approval.
+- The art is still placeholder for everything except the water and the car: flat boxes for buildings, a dark foreground fill, no lighting, no weather. The water is better but is still a 2D sheet: no refraction, no real curl physics (the crest is a drawn shape placed at the solver's bore front). The style bible is still a draft awaiting your approval.
 - The cuts and timing (when the wide shot cuts in for the impact, how long the time-lapse is) are my choices.
 - The story logic is mine: he climbs because he saw the water coming; nothing in the video says so yet (no sound, no captions, no voice).
 

@@ -29,3 +29,12 @@ Hand-directed series such as The Quiet Coast do **not** use the generic episode 
 - `npx tsx scripts/story-check.ts story/<slug>` validates continuity and writes `pacing.md` (scene lengths vs targets, SOS fit, captions).
 - `npx tsx scripts/story-animatic.ts story/<slug>` renders review animatics to `out/<slug>/animatic-part-N.mp4`.
 Workflow gate: script → animatic → user review → build scenes → render. Do not skip the review.
+
+## Supermarket film (16:9 YouTube cut): `clips/wide/`
+Source of truth: `story/supermarket/script-v4.md` (local only, git-ignored). Scenes are keyed to sentence numbers per chapter, so inserting a sentence shifts every later index in `clips/wide/chapters/chN.tsx`.
+Flow with a review gate (do not skip it):
+1. `npx tsx --env-file=.env clips/wide/pipeline.mts prepare [chapters] [--revoice]` voices missing chapters, builds, runs the layout lint (`check.mts`) and writes preview sheets to `scratch/preview-chN-*.png`.
+2. Look at the sheets (and listen if the voice changed), fix problems, rerun until the lint passes.
+3. `npx tsx clips/wide/pipeline.mts approve`, then `... render` (refuses if anything changed since approval). It renders 1080p on the GPU with temp files on D: (C: is nearly full), joins the chapters and prints the YouTube chapter times.
+Layout rules: narration is one word at a time in the bottom band (y >= 600 of 720); every other text stays above y=590, inside the frame, and never overlaps other text (the lint checks this). Story rule from the user: nothing is opened before it is truly necessary (envelope not before day ten and only as a last resort; freezer only when there is no other way).
+ElevenLabs: put `ELEVENLABS_API_KEY` in `.env`, run `npx tsx --env-file=.env clips/store/eleven-check.mts`, then voice with `USE_ELEVEN=1 ... pipeline.mts prepare --revoice`.

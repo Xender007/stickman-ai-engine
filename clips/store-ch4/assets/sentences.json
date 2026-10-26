@@ -1,0 +1,116 @@
+{
+ "engine": "kokoro",
+ "total": 64.51329166666666,
+ "sentences": [
+  {
+   "text": "A grey box with a red handle.",
+   "start": 0.6,
+   "end": 2.4154166666666668
+  },
+  {
+   "text": "You have never run so fast in your life.",
+   "start": 2.7154166666666666,
+   "end": 5.014666666666667
+  },
+  {
+   "text": "Thirty-five seconds of light, then darkness, then silence.",
+   "start": 5.314666666666666,
+   "end": 8.860958333333333
+  },
+  {
+   "text": "But for thirty-five seconds, you were the brightest, loudest building in town.",
+   "start": 9.160958333333333,
+   "end": 13.95075
+  },
+  {
+   "text": "House rule: the breaker stays off.",
+   "start": 14.25075,
+   "end": 16.45104166666667
+  },
+  {
+   "text": "It is too late.",
+   "start": 17.251041666666666,
+   "end": 18.264875
+  },
+  {
+   "text": "They are not leaning anymore.",
+   "start": 18.564875,
+   "end": 20.17075
+  },
+  {
+   "text": "They are pushing.",
+   "start": 20.470750000000002,
+   "end": 21.457125
+  },
+  {
+   "text": "Problem three: the shutter.",
+   "start": 21.757125000000002,
+   "end": 23.265958333333334
+  },
+  {
+   "text": "It was built to stop one man with a crowbar.",
+   "start": 23.565958333333334,
+   "end": 25.96875
+  },
+  {
+   "text": "Not 250 people.",
+   "start": 26.26875,
+   "end": 28.12425
+  },
+  {
+   "text": "By midnight, the steel has started to bow.",
+   "start": 28.42425,
+   "end": 30.915916666666668
+  },
+  {
+   "text": "So you build a second wall.",
+   "start": 31.21591666666667,
+   "end": 32.75904166666667
+  },
+  {
+   "text": "Pallets of bottled water, a ton each, parked against the steel.",
+   "start": 33.059041666666666,
+   "end": 36.94466666666666
+  },
+  {
+   "text": "Then shopping carts, nested and chained, thirty to a row.",
+   "start": 37.24466666666667,
+   "end": 40.863458333333334
+  },
+  {
+   "text": "One row weighs as much as a small car.",
+   "start": 41.16345833333333,
+   "end": 43.61258333333333
+  },
+  {
+   "text": "But a wall only buys time.",
+   "start": 43.91258333333333,
+   "end": 45.681041666666665
+  },
+  {
+   "text": "You need them to leave.",
+   "start": 45.98104166666666,
+   "end": 47.34162499999999
+  },
+  {
+   "text": "Aisle 9 sells alarm clocks, the loud kind with two bells.",
+   "start": 47.641625,
+   "end": 51.86883333333333
+  },
+  {
+   "text": "You set one for noon.",
+   "start": 52.16883333333333,
+   "end": 53.49075
+  },
+  {
+   "text": "Then, in the dark, you hurl it off the back of the roof as far as you can.",
+   "start": 53.790749999999996,
+   "end": 58.03225
+  },
+  {
+   "text": "At noon it starts ringing, and 250 heads swing the other way.",
+   "start": 58.332249999999995,
+   "end": 62.813291666666665
+  }
+ ]
+}

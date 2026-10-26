@@ -5,8 +5,12 @@ import * as THREE from 'three';
 import { LANES } from '@engine/contracts/src/lanes.ts';
 import type { EnvEntityFrame, EnvFrame } from '../../../packages/world/src/envtimeline.ts';
 import { CameraRig } from './CameraRig.tsx';
+import { deterministicSort } from './sortOrder.ts';
 import { Skyline } from './Lanes.tsx';
 import { StickFigure } from './Figure.tsx';
+import { Car as CarModel, CarBubbles } from './CarModel.tsx';
+import { BoreFx, SplashFx, WaterSurface } from './Water.tsx';
+import { activeFx, lastOf } from './fx.ts';
 import { GANTRY as STAIRS } from '../../../packages/motion/src/pilot.ts';
 
 export type EnvProps = { frames: EnvFrame[]; label?: boolean };
@@ -73,38 +77,6 @@ const Building: React.FC<{ e: EnvEntityFrame }> = ({ e }) => {
   );
 };
 
-const Car: React.FC<{ e: EnvEntityFrame }> = ({ e }) => {
-  const z = 0;
-  const base = e.y - e.h / 2;
-  const wrecked = e.damage === 'wrecked';
-  const dented = e.damage !== 'intact';
-  const cabinH = wrecked ? 0.5 : 0.7;
-  return (
-    <group position={[e.x, 0, z]}>
-      <Box p={[0, base + 0.55, 0]} s={[e.w, 0.8, 1.7]} c="#2b0f12" />
-      <Box p={[0, base + 0.55, 0.01]} s={[e.w - 0.06, 0.74, 1.7]} c="#b3262c" />
-      <Box p={[-0.1, base + 1.0 + cabinH / 2 - 0.05, 0]} s={[2.3, cabinH, 1.6]} c="#2b0f12" />
-      <Box p={[-0.1, base + 1.0 + cabinH / 2 - 0.05, 0.01]} s={[2.24, cabinH - 0.06, 1.6]} c="#9c2025" />
-      <Box p={[-0.1, base + 1.0 + cabinH / 2 - 0.05, 0.85]} s={[2.0, cabinH - 0.2, 0.02]} c={wrecked ? '#2a3140' : '#5f7893'} />
-      <Disc p={[-1.4, base + 0.32, 0.9]} r={0.38} c="#0b0b0e" />
-      <Disc p={[1.4, base + 0.32, 0.9]} r={0.38} c="#0b0b0e" />
-      <Disc p={[-1.4, base + 0.32, 0.92]} r={0.16} c="#8d93a0" />
-      <Disc p={[1.4, base + 0.32, 0.92]} r={0.16} c="#8d93a0" />
-      {dented && (
-        <>
-          {/* crumpled front: the log struck the seaward (left) end */}
-          <Box p={[-e.w / 2 + 0.28, base + 0.55, 0.9]} s={[0.55, 0.65, 0.02]} c="#4a1216" rz={0.12} />
-          <Box p={[-e.w / 2 + 0.2, base + 0.35, 0.91]} s={[0.35, 0.3, 0.02]} c="#2b0f12" rz={-0.3} />
-          <Box p={[-e.w / 2 + 0.75, base + 0.62, 0.91]} s={[0.5, 0.05, 0.02]} c="#2b0f12" rz={0.5} />
-          <Box p={[-0.9, base + 1.28, 0.87]} s={[0.7, 0.04, 0.02]} c="#dfe6ee" rz={0.6} />
-          <Box p={[-0.8, base + 1.26, 0.87]} s={[0.5, 0.04, 0.02]} c="#dfe6ee" rz={-0.5} />
-        </>
-      )}
-      <WetBand e={{ ...e, x: 0, y: e.y }} z={1.0} />
-    </group>
-  );
-};
-
 const Log: React.FC<{ e: EnvEntityFrame }> = ({ e }) => (
   <group position={[e.x, e.y, 0.2]} rotation={[0, 0, e.angle]}>
     <mesh geometry={CYL} material={mat('#5b4026')} scale={[e.h / 2, e.w, e.h / 2]} rotation={[0, 0, Math.PI / 2]} />
@@ -133,27 +105,6 @@ const Crate: React.FC<{ e: EnvEntityFrame }> = ({ e }) => (
   </group>
 );
 
-/** The solver's water: one thin translucent column per cell, foam where it moves fast or steepens (bore fronts, overfalls). */
-const ProfileWater: React.FC<{ f: EnvFrame }> = ({ f }) => {
-  const p = f.water.profile!;
-  const cols: React.ReactNode[] = [];
-  for (let i = 0; i < p.depth.length; i++) {
-    const d = p.depth[i];
-    if (d < 0.004) continue;
-    const x = p.x0 + i * p.step;
-    const eta = p.eta[i];
-    const steep = Math.abs(d - (p.depth[i - 1] ?? d)) > 0.25 || Math.abs(d - (p.depth[i + 1] ?? d)) > 0.25;
-    const fast = Math.abs(p.u[i]) > 3;
-    cols.push(<Box key={`w${i}`} p={[x, eta - d / 2, 2.3]} s={[p.step + 0.02, d, 0.4]} c="#1c4a60" o={0.68} />);
-    cols.push(<Box key={`t${i}`} p={[x, eta, 2.35]} s={[p.step + 0.02, 0.08, 0.45]} c="#cfe9f2" o={0.95} />);
-    if (steep || fast) cols.push(<Box key={`f${i}`} p={[x, eta + 0.08, 2.4]} s={[p.step + 0.02, 0.28, 0.45]} c="#f2fafc" o={0.85} />);
-  }
-  // beyond the sampled region the sea continues at the level of the first cell
-  const seaEta = p.eta[0];
-  cols.push(<Box key="sea" p={[p.x0 - 20, (seaEta - 30) / 2, 2.3]} s={[40, seaEta + 30, 0.4]} c="#1c4a60" o={0.68} />);
-  return <>{cols}</>;
-};
-
 /** Stair gantry: 12 treads up to a raised landing on posts, with a rail. Geometry comes from the entity: width = stairs + landing. */
 const GANTRY = STAIRS; // one source: the same numbers drive the character's footholds
 const Gantry: React.FC<{ e: EnvEntityFrame }> = ({ e }) => {
@@ -164,7 +115,7 @@ const Gantry: React.FC<{ e: EnvEntityFrame }> = ({ e }) => {
   const parts: React.ReactNode[] = [];
   for (let j = 1; j <= GANTRY.n; j++) {
     const xc = x0 + (j - 0.5) * GANTRY.run;
-    parts.push(<Box key={'t' + j} p={[xc, (j * GANTRY.rise) / 2 - 0.0, z]} s={[GANTRY.run, j * GANTRY.rise, 1.6]} c={j % 2 ? '#4a4f5e' : '#434857'} />);
+    parts.push(<Box key={'t' + j} p={[xc, (j * GANTRY.rise) / 2, z]} s={[GANTRY.run, j * GANTRY.rise, 1.6]} c={j % 2 ? '#4a4f5e' : '#434857'} />);
     parts.push(<Box key={'n' + j} p={[xc, j * GANTRY.rise + 0.012, z + 0.81]} s={[GANTRY.run, 0.03, 0.02]} c="#c9cfdc" />);
   }
   const lw = e.w - GANTRY.n * GANTRY.run;
@@ -191,16 +142,24 @@ const Bollard: React.FC<{ e: EnvEntityFrame }> = ({ e }) => (
 
 export const EnvScene: React.FC<EnvProps> = ({ frames, label = true }) => {
   const frame = useCurrentFrame();
-  const { width, height } = useVideoConfig();
+  const { width, height, fps } = useVideoConfig();
   const f = frames[Math.min(frame, frames.length - 1)];
   const cam = f.camera;
   const level = f.water.level;
   const flooded = Number.isFinite(f.water.front) && f.water.front > 0;
+  const tEdit = frame / fps;
+  const fx = activeFx(frames, Math.min(frame, frames.length - 1), fps);
+  const hit = lastOf(fx, 'impact');
+  const carImpactAge = hit ? hit.age : null;
+  // camera shake after an impact: a fast decaying wobble, a pure function of the impact's age
+  const shake = hit ? Math.exp(-5.5 * hit.age) * Math.min(1, hit.power) * 0.09 : 0;
+  const camPos: [number, number, number] = [cam.pos[0] + shake * Math.sin(61 * (hit?.age ?? 0)), cam.pos[1] + shake * Math.cos(47 * (hit?.age ?? 0)) * 0.8, cam.pos[2]];
+  const car = f.entities.find((e) => e.kind === 'car');
 
   return (
     <AbsoluteFill style={{ background: 'linear-gradient(#1c2340,#9b7f7c 80%)' }}>
-      <ThreeCanvas width={width} height={height} camera={{ position: cam.pos, rotation: [0, 0, 0], fov: cam.fovDeg, near: 0.1, far: 3000 }}>
-        <CameraRig position={cam.pos} fov={cam.fovDeg} />
+      <ThreeCanvas onCreated={({ gl }) => deterministicSort(gl)} width={width} height={height} camera={{ position: cam.pos, rotation: [0, 0, 0], fov: cam.fovDeg, near: 0.1, far: 3000 }}>
+        <CameraRig position={camPos} fov={cam.fovDeg} />
         <ambientLight intensity={1.5} />
         <directionalLight position={[-6, 10, 8]} intensity={1.2} />
         <Skyline lane="far" color="#3a4260" count={30} seed={3} height={34} />
@@ -212,7 +171,7 @@ export const EnvScene: React.FC<EnvProps> = ({ frames, label = true }) => {
         <Box p={[-3, -15, -2]} s={[6, 30, 16]} c="#363b4c" />
         {f.entities.map((e) => {
           if (e.kind === 'building') return <Building key={e.id} e={e} />;
-          if (e.kind === 'car') return <Car key={e.id} e={e} />;
+          if (e.kind === 'car') return <CarModel key={e.id} e={e} z={0} impactAge={carImpactAge} tEdit={tEdit} />;
           if (e.kind === 'gantry') return <Gantry key={e.id} e={e} />;
           if (e.kind === 'character') return null; // drawn from f.characters (joints), below
           if (e.kind === 'log') return <Log key={e.id} e={e} />;
@@ -224,7 +183,12 @@ export const EnvScene: React.FC<EnvProps> = ({ frames, label = true }) => {
           <StickFigure key={c.id} j={c.j} z={LANES.front.z} wetness={c.wetness} />
         ))}
         {/* one water for every camera */}
-        {f.water.profile && <ProfileWater f={f} />}
+        {f.water.profile && <WaterSurface p={f.water.profile} tEdit={tEdit} z={2.3} />}
+        {f.water.profile && <BoreFx p={f.water.profile} tEdit={tEdit} z={2.3} />}
+        {fx.map((e, i) => (
+          <SplashFx key={i} e={e} z={2.3} />
+        ))}
+        {car && f.water.profile && <CarBubbles e={car} surface={f.water.profile.eta[Math.max(0, Math.min(f.water.profile.eta.length - 1, Math.round((car.x - f.water.profile.x0) / f.water.profile.step)))]} tEdit={tEdit} z={2.28} />}
         {!f.water.profile && <Box p={[-33, (level - 30) / 2, 2.3]} s={[54, level + 30, 0.4]} c="#1c4a60" o={0.68} />}
         {!f.water.profile && <Box p={[-33, level, 2.35]} s={[54, 0.1, 0.45]} c="#cfe9f2" o={0.95} />}
         {!f.water.profile && flooded && level > 0 && (

@@ -5,7 +5,12 @@ import { WetState, type FloodScenario } from '../../environment/src/flood.ts';
 
 /** Damage from a collision impulse (N*s). Starting values, uncalibrated: change only with a benchmark (rule R12). */
 export const DAMAGE_THRESHOLDS = { dented: 100, wrecked: 600 } as const;
-export const damageFromImpulse = (impulse: number): Damage | null => (impulse >= DAMAGE_THRESHOLDS.wrecked ? 'wrecked' : impulse >= DAMAGE_THRESHOLDS.dented ? 'dented' : null);
+/** How much harder than a car each kind is to damage (a steel gantry or a stone quay wall shrugs off a floating log). */
+export const HARDNESS: Record<string, number> = { car: 1, crate: 0.5, log: 2, lamp: 4, bollard: 20, gantry: 25, quay: 60, building: 60 };
+export const damageFromImpulse = (impulse: number, kind = 'car'): Damage | null => {
+  const k = impulse / (HARDNESS[kind] ?? 1);
+  return k >= DAMAGE_THRESHOLDS.wrecked ? 'wrecked' : k >= DAMAGE_THRESHOLDS.dented ? 'dented' : null;
+};
 
 export interface EnvShot {
   fromFrame: number;
@@ -23,9 +28,22 @@ export interface CharacterInput {
   /** x of the left and right foot, for the water they stand in. */
   feetX: [number, number];
   feetY: [number, number];
+  /** Which feet are planted this frame (for footstep splashes). */
+  planted?: [boolean, boolean];
+  /** Optional 3D rig (shots with visible turns): joints in RIG3_ORDER as x,y,z triples, yaws, and the carried box [x,y,z,yaw]. */
+  rig3?: Rig3Frame;
+}
+
+export const RIG3_ORDER = ['hip', 'hipL', 'hipR', 'kneeL', 'kneeR', 'footL', 'footR', 'neck', 'shL', 'shR', 'elbowL', 'elbowR', 'handL', 'handR', 'head'] as const;
+export interface Rig3Frame {
+  j: number[];
+  hipYaw: number;
+  chestYaw: number;
+  box: [number, number, number, number];
 }
 
 export interface CharacterFrame {
+  rig3?: Rig3Frame;
   id: string;
   j: number[];
   facing: 1 | -1;
@@ -57,8 +75,21 @@ export interface WaterProfile {
   u: number[];
 }
 
+/** A visual effect that starts at a frame. Ages are measured in edit seconds so effects look right inside a time-lapse. */
+export interface FxEvent {
+  kind: 'impact' | 'entry' | 'step';
+  x: number;
+  y: number;
+  /** 0..~3: how big the splash/impact is (from the impulse, the entry speed, or the step). */
+  power: number;
+  /** Seed so each effect's droplets are different but identical on every render. */
+  seed: number;
+}
+
 export interface EnvFrame {
   frame: number;
+  /** Effects that start at this frame. */
+  fx: FxEvent[];
   characters: CharacterFrame[];
   /** Story seconds at this frame (the two clocks: edit time is `frame / fps`). */
   t: number;
@@ -106,6 +137,7 @@ export function buildEnvTimeline(input: EnvInput): EnvFrame[] {
   const pending = [...input.impacts].sort((a, b) => a.t - b.t);
   const causes: string[] = [];
   const out: EnvFrame[] = [];
+  const charInputs: CharacterInput[][] = [];
   const storyTime = input.storyTime ?? ((f: number) => f / input.fps);
   let prevT = storyTime(0);
 
@@ -115,7 +147,8 @@ export function buildEnvTimeline(input: EnvInput): EnvFrame[] {
     prevT = t;
     while (pending.length && pending[0].t <= t) {
       const ev = pending.shift()!;
-      const to = damageFromImpulse(ev.impulse);
+      const struckKind = input.location.entities.find((e) => e.id === ev.b)?.kind ?? 'car';
+      const to = damageFromImpulse(ev.impulse, struckKind);
       if (to && ledger.get(ev.b).damage !== to) {
         ledger.apply({ kind: 'damage', id: ev.b, to, cause: `${ev.a} hit ${ev.b}: ${ev.impulse.toFixed(0)} N*s at t=${ev.t.toFixed(2)}` });
         causes.push(`${ev.b}: ${to} <- ${ev.a} ${ev.impulse.toFixed(0)} N*s at t=${ev.t.toFixed(2)}`);
@@ -144,7 +177,9 @@ export function buildEnvTimeline(input: EnvInput): EnvFrame[] {
       };
     });
 
-    const characters: CharacterFrame[] = (input.charactersAt?.(f, t) ?? []).map((c) => {
+    const posedChars = input.charactersAt?.(f, t) ?? [];
+    charInputs.push(posedChars);
+    const characters: CharacterFrame[] = posedChars.map((c) => {
       // A character's legs have their own wetness (submersion of the feet); the entity's wet state (street depth at its edge) is separate.
       const ws = wet.get('char:' + c.id) ?? new WetState();
       wet.set('char:' + c.id, ws);
@@ -154,7 +189,7 @@ export function buildEnvTimeline(input: EnvInput): EnvFrame[] {
       const speed = input.flood.depthAt(c.feetX[k], t) > 0.005 ? Math.abs(input.flood.velocityAt(c.feetX[k], t)) : 0;
       const clearance = Math.min(...[0, 1].map((i) => c.feetY[i] - (input.flood.depthAt(c.feetX[i], t) > 0.005 ? input.flood.etaAt(c.feetX[i], t) : -Infinity)));
       const w = ws.step(sub[k], dt, { h: 1, baseY: 0 });
-      return { id: c.id, j: c.j.map(r3), facing: c.facing, wetness: w.wetness, exposure: { depth: sub[k], speed, dv: sub[k] * speed, clearance: Number.isFinite(clearance) ? clearance : 99 } };
+      return { id: c.id, rig3: c.rig3, j: c.j.map(r3), facing: c.facing, wetness: w.wetness, exposure: { depth: sub[k], speed, dv: sub[k] * speed, clearance: Number.isFinite(clearance) ? clearance : 99 } };
     });
 
     let profile: WaterProfile | undefined;
@@ -173,6 +208,7 @@ export function buildEnvTimeline(input: EnvInput): EnvFrame[] {
 
     out.push({
       frame: f,
+      fx: [],
       characters,
       t,
       shot: shotIndex,
@@ -182,6 +218,46 @@ export function buildEnvTimeline(input: EnvInput): EnvFrame[] {
       causes: [...causes],
     });
   }
+  // Effects, derived from the simulation (never scripted): collisions, bodies entering the water, feet landing in it.
+  const seedOf = (a: number, b: number) => (Math.imul(a + 1, 2654435761) ^ Math.imul(b + 7, 40503)) >>> 0;
+  for (const ev of input.impacts) {
+    const f0 = out.findIndex((fr) => fr.t >= ev.t);
+    if (f0 < 0) continue;
+    const a = out[f0].entities.find((e) => e.id === ev.a);
+    const b = out[f0].entities.find((e) => e.id === ev.b);
+    if (!a || !b) continue;
+    out[f0].fx.push({ kind: 'impact', x: (a.x + a.w / 2 + (b.x - b.w / 2)) / 2, y: a.y, power: Math.min(3, ev.impulse / 300), seed: seedOf(f0, 1) });
+  }
+  const floaters = input.location.entities.filter((e) => e.kind === 'log' || e.kind === 'crate');
+  for (const fl of floaters) {
+    let was = false;
+    let lastFx = -999;
+    for (let f = 0; f < out.length; f++) {
+      const e = out[f].entities.find((x) => x.id === fl.id)!;
+      const t = out[f].t;
+      const wet2 = input.flood.depthAt(e.x, t) > 0.02 && e.y - e.h / 2 < input.flood.etaAt(e.x, t);
+      if (wet2 && !was && f - lastFx > 20) {
+        out[f].fx.push({ kind: 'entry', x: e.x, y: input.flood.etaAt(e.x, t), power: Math.min(2.5, 0.6 + Math.abs(input.flood.velocityAt(e.x, t)) / 3), seed: seedOf(f, fl.id.length) });
+        lastFx = f;
+      }
+      was = wet2;
+    }
+  }
+  for (let f = 1; f < out.length; f++) {
+    const now = charInputs[f];
+    const before = charInputs[f - 1];
+    now.forEach((c, i) => {
+      const pb = before[i]?.planted;
+      if (!c.planted || !pb) return;
+      for (const k of [0, 1] as const) {
+        if (c.planted[k] && !pb[k]) {
+          const sub = input.flood.depthAt(c.feetX[k], out[f].t) > 0.01 ? input.flood.etaAt(c.feetX[k], out[f].t) - c.feetY[k] : 0;
+          if (sub > 0.005) out[f].fx.push({ kind: 'step', x: c.feetX[k], y: c.feetY[k] + sub, power: Math.min(1, 0.3 + sub * 3), seed: seedOf(f, 100 + k) });
+        }
+      }
+    });
+  }
+
   // Follow cameras: a centred, cosine-weighted moving average of the followed entity, clamped to the shot.
   input.shots.forEach((shot, si) => {
     const fo = shot.follow;

@@ -1,0 +1,206 @@
+{
+ "engine": "kokoro",
+ "total": 116.30991666666667,
+ "sentences": [
+  {
+   "text": "You slam the fire exit and drag four pallets of cat litter against it.",
+   "start": 0.6,
+   "end": 5.161333333333333
+  },
+  {
+   "text": "Then you lock every door and snap your own key off in the staff entrance.",
+   "start": 5.461333333333333,
+   "end": 9.709833333333332
+  },
+  {
+   "text": "Now nobody can get in.",
+   "start": 10.009833333333333,
+   "end": 11.435541666666666
+  },
+  {
+   "text": "You tell yourself that is the same as nobody being inside.",
+   "start": 11.735541666666666,
+   "end": 15.528875
+  },
+  {
+   "text": "The footprints dry up by the bakery.",
+   "start": 16.328875,
+   "end": 18.410541666666667
+  },
+  {
+   "text": "You search every aisle with a flashlight from aisle 9.",
+   "start": 18.710541666666668,
+   "end": 21.730125
+  },
+  {
+   "text": "Nothing.",
+   "start": 22.030125,
+   "end": 22.723708333333335
+  },
+  {
+   "text": "Emergency lights are built to last two hours, long enough for everyone to leave.",
+   "start": 23.023708333333335,
+   "end": 28.139833333333335
+  },
+  {
+   "text": "Nobody planned for somebody staying.",
+   "start": 28.439833333333336,
+   "end": 30.490250000000003
+  },
+  {
+   "text": "When they die, you learn something about supermarkets.",
+   "start": 30.790250000000004,
+   "end": 33.91495833333334
+  },
+  {
+   "text": "They have no windows.",
+   "start": 34.214958333333335,
+   "end": 35.56541666666667
+  },
+  {
+   "text": "With the shutter down, you have built yourself a cave.",
+   "start": 35.86541666666667,
+   "end": 39.00170833333333
+  },
+  {
+   "text": "Problem two: the rot.",
+   "start": 39.80170833333334,
+   "end": 41.202000000000005
+  },
+  {
+   "text": "Without power, a fridge keeps food safe for five hours.",
+   "start": 41.502,
+   "end": 45.264541666666666
+  },
+  {
+   "text": "A full freezer, three days.",
+   "start": 45.56454166666667,
+   "end": 47.345333333333336
+  },
+  {
+   "text": "After that, you are sealed in with three tons of meat, milk and fish.",
+   "start": 47.64533333333334,
+   "end": 51.74241666666667
+  },
+  {
+   "text": "But there is a walk-in freezer, a steel room with a rubber seal.",
+   "start": 52.042416666666675,
+   "end": 55.83408333333334
+  },
+  {
+   "text": "It keeps the warm air out, and everything else in.",
+   "start": 56.13408333333334,
+   "end": 59.09958333333334
+  },
+  {
+   "text": "You spend nine hours and one cart filling it.",
+   "start": 59.39958333333335,
+   "end": 61.92912500000001
+  },
+  {
+   "text": "You keep the bread and the fruit.",
+   "start": 62.22912500000001,
+   "end": 63.92900000000001
+  },
+  {
+   "text": "Then you tape the seams and write on the door: do not open.",
+   "start": 64.22900000000001,
+   "end": 67.71737500000002
+  },
+  {
+   "text": "Ever.",
+   "start": 68.01737500000002,
+   "end": 68.57133333333334
+  },
+  {
+   "text": "On the second morning, something is wrong.",
+   "start": 69.37133333333335,
+   "end": 71.57829166666669
+  },
+  {
+   "text": "The tins you stacked in aisle 5 have been rebuilt into a pyramid.",
+   "start": 71.87829166666668,
+   "end": 76.17416666666668
+  },
+  {
+   "text": "You did not build a pyramid.",
+   "start": 76.47416666666669,
+   "end": 78.11750000000002
+  },
+  {
+   "text": "You check the cameras.",
+   "start": 78.41750000000002,
+   "end": 79.67933333333335
+  },
+  {
+   "text": "They have no power.",
+   "start": 79.97933333333336,
+   "end": 81.1121666666667
+  },
+  {
+   "text": "You check the locks.",
+   "start": 81.41216666666669,
+   "end": 82.5711666666667
+  },
+  {
+   "text": "Every one is still shut.",
+   "start": 82.8711666666667,
+   "end": 84.06904166666669
+  },
+  {
+   "text": "Somebody is living in this building with you.",
+   "start": 84.36904166666669,
+   "end": 86.86845833333335
+  },
+  {
+   "text": "On the third night, you hold Rhea's envelope up to a flashlight.",
+   "start": 87.66845833333336,
+   "end": 91.59462500000002
+  },
+  {
+   "text": "You can almost read the words through the paper.",
+   "start": 91.89462500000003,
+   "end": 94.29458333333336
+  },
+  {
+   "text": "You slide it back into your apron.",
+   "start": 94.59458333333336,
+   "end": 96.52158333333337
+  },
+  {
+   "text": "Day ten, she said.",
+   "start": 96.82158333333336,
+   "end": 97.9922916666667
+  },
+  {
+   "text": "Not before.",
+   "start": 98.2922916666667,
+   "end": 99.26491666666669
+  },
+  {
+   "text": "On the fourth morning, you climb onto the roof.",
+   "start": 100.0649166666667,
+   "end": 102.7506666666667
+  },
+  {
+   "text": "Three nights ago, the parking lot was empty.",
+   "start": 103.0506666666667,
+   "end": 105.7422916666667
+  },
+  {
+   "text": "Now there are 150 people standing in it, all facing the doors.",
+   "start": 106.0422916666667,
+   "end": 110.6679166666667
+  },
+  {
+   "text": "They are not hunting you.",
+   "start": 110.9679166666667,
+   "end": 112.27108333333337
+  },
+  {
+   "text": "They are waiting for the store to open.",
+   "start": 112.57108333333336,
+   "end": 114.60991666666669
+  }
+ ]
+}

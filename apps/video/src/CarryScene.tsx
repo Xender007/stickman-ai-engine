@@ -5,6 +5,7 @@ import { RIG } from '../../../packages/motion/src/rig.ts';
 import type { CarryProps } from './carryProps.ts';
 import { Skyline } from './Lanes.tsx';
 import { CameraRig } from './CameraRig.tsx';
+import { deterministicSort } from './sortOrder.ts';
 
 import { Bone, DISC, J, mat, NEAR, FAR, OUTLINE, pt } from './Figure.tsx';
 
@@ -32,7 +33,7 @@ export const CarryScene: React.FC<CarryProps> = ({ frames }) => {
 
   return (
     <AbsoluteFill style={{ background: 'linear-gradient(#242b45,#aa8c88 78%)' }}>
-      <ThreeCanvas width={width} height={height} camera={{ position: [camX, 1.55, 7.2], rotation: [0, 0, 0], fov: 40, near: 0.1, far: 3000 }}>
+      <ThreeCanvas onCreated={({ gl }) => deterministicSort(gl)} width={width} height={height} camera={{ position: [camX, 1.55, 7.2], rotation: [0, 0, 0], fov: 40, near: 0.1, far: 3000 }}>
         <CameraRig position={[camX, 1.55, 7.2]} />
         <ambientLight intensity={1.5} />
         <directionalLight position={[-6, 10, 8]} intensity={1.2} />

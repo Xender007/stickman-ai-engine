@@ -1,9 +1,10 @@
+import { SHOT_LAYOUT } from '../../environment/src/shot-terrain.ts';
 import type { Lane } from '@engine/contracts/src/scenespec.ts';
 
 /** A location is data in metres: where things are, how big they are, which lane they live in. Same data feeds every camera. */
 export interface PlacedEntity {
   id: string;
-  kind: 'car' | 'log' | 'crate' | 'building' | 'lamp' | 'bollard' | 'gantry' | 'character';
+  kind: 'car' | 'log' | 'crate' | 'building' | 'lamp' | 'bollard' | 'gantry' | 'character' | 'quay';
   lane: Lane;
   /** Centre of the footprint on the ground (x) and the lane's depth is implied by `lane`. */
   x: number;
@@ -50,6 +51,30 @@ export const harborStreetWithRavi = (g: { x0: number; run: number; n: number; la
       { id: 'gantry_01', kind: 'gantry', lane: 'hero', x: g.x0 + w / 2, w, h: g.n * g.rise, baseY: 0 },
       { id: 'ravi', kind: 'character', lane: 'front', x: xStart, w: 0.5, h: 1.74, baseY: 0 },
       { id: 'box_ravi', kind: 'crate', lane: 'front', x: xStart + 0.8, w: 0.5, h: 0.4, baseY: 0 },
+    ],
+  };
+};
+
+/**
+ * The compact set of the single locked 10 s shot: quay wall lower left, sedan lower middle facing the sea, a lamp just
+ * right of it, the stair gantry on the right third. Characters, the stairs and the log share the front lane.
+ */
+export const shotLocation = (g: { x0: number; run: number; n: number; landingLen: number; rise: number }, xStart: number): Location => {
+  const w = g.n * g.run + g.landingLen;
+  return {
+    id: 'harbor_shot@1',
+    quayX: 0,
+    streetEndX: 13.2,
+    entities: [
+      { id: 'quay_wall', kind: 'quay', lane: 'front', x: -0.3, w: 0.6, h: 0.9, baseY: 0 },
+      { id: 'car_017', kind: 'car', lane: 'hero', x: SHOT_LAYOUT.carX, w: 4.2, h: 1.5, baseY: 0 },
+      { id: 'log_003', kind: 'log', lane: 'front', x: SHOT_LAYOUT.logX, w: 1.8, h: 0.32, baseY: 0 },
+      { id: 'lamp_01', kind: 'lamp', lane: 'hero', x: SHOT_LAYOUT.lampX, w: 0.2, h: 4.4, baseY: 0 },
+      { id: 'gantry_01', kind: 'gantry', lane: 'front', x: g.x0 + w / 2, w, h: g.n * g.rise, baseY: 0 },
+      { id: 'bldg_a', kind: 'building', lane: 'near', x: 1.5, w: 7, h: 11, baseY: 0 },
+      { id: 'bldg_b', kind: 'building', lane: 'near', x: 9.5, w: 8, h: 15, baseY: 0 },
+      { id: 'ravi', kind: 'character', lane: 'front', x: xStart, w: 0.5, h: 1.74, baseY: 0 },
+      { id: 'box_ravi', kind: 'crate', lane: 'front', x: xStart + 0.4, w: 0.45, h: 0.4, baseY: 0 },
     ],
   };
 };

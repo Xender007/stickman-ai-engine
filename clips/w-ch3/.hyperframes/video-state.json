@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "historyId": "331b2cff-b5ce-4742-bea2-1c87cee37291",
+  "currentRevision": "ceeff10e-1504-42c7-b1e6-107248dd3896",
+  "pendingChanges": false,
+  "files": {
+    "assets/Anton-Regular.ttf": {
+      "hash": "a4ba3a92350ebb031da0cb47630ac49eb265082ca1bc0450442f4a83ab947cab",
+      "content": "C:\\Users\\supro\\.cache\\hyperframes\\history\\331b2cff-b5ce-4742-bea2-1c87cee37291\\blobs\\a4\\a4ba3a92350ebb031da0cb47630ac49eb265082ca1bc0450442f4a83ab947cab"
+    },
+    "assets/PatrickHand-Regular.ttf": {
+      "hash": "0f173b3e6cb6d1af25babf7f0057c5ac4ee11f9992b0469bb817e967ef4ad0fc",
+      "content": "C:\\Users\\supro\\.cache\\hyperframes\\history\\331b2cff-b5ce-4742-bea2-1c87cee37291\\blobs\\0f\\0f173b3e6cb6d1af25babf7f0057c5ac4ee11f9992b0469bb817e967ef4ad0fc"
+    },
+    "assets/gsap.min.js": {
+      "hash": "92bb9a96476f983d212a2bc4f54c889039c1696dd4461d40a736860938570fbb",
+      "content": "C:\\Users\\supro\\.cache\\hyperframes\\history\\331b2cff-b5ce-4742-bea2-1c87cee37291\\blobs\\92\\92bb9a96476f983d212a2bc4f54c889039c1696dd4461d40a736860938570fbb"
+    },
+    "assets/scenes.js": {
+      "hash": "6c0f4e062458eba2fadaa93077634c26b9df756fcb3bf867d1714f8694ba7e8d",
+      "content": "C:\\Users\\supro\\.cache\\hyperframes\\history\\331b2cff-b5ce-4742-bea2-1c87cee37291\\blobs\\6c\\6c0f4e062458eba2fadaa93077634c26b9df756fcb3bf867d1714f8694ba7e8d"
+    },
+    "assets/sentences.json": {
+      "hash": "7249e2325aa8b8fd32f30c0f65fb30b8e2a40610b936e3f3378e45a704aab531",
+      "content": "C:\\Users\\supro\\.cache\\hyperframes\\history\\331b2cff-b5ce-4742-bea2-1c87cee37291\\blobs\\72\\7249e2325aa8b8fd32f30c0f65fb30b8e2a40610b936e3f3378e45a704aab531"
+    },
+    "assets/words.json": {
+      "hash": "31d88b55c2ffb0c6e205c8fc4fc0b34512168d459feb9937827e818043f6423b",
+      "content": "C:\\Users\\supro\\.cache\\hyperframes\\history\\331b2cff-b5ce-4742-bea2-1c87cee37291\\blobs\\31\\31d88b55c2ffb0c6e205c8fc4fc0b34512168d459feb9937827e818043f6423b"
+    },
+    "index.html": {
+      "hash": "f41fd3d25276fc59aef5650ff87e1e3cb16f7290888e0bca9b0549de663f7005",
+      "content": "C:\\Users\\supro\\.cache\\hyperframes\\history\\331b2cff-b5ce-4742-bea2-1c87cee37291\\blobs\\f4\\f41fd3d25276fc59aef5650ff87e1e3cb16f7290888e0bca9b0549de663f7005"
+    },
+    "assets/narration.wav": {
+      "hash": "f0f5f83a2dbde03173b07d14a53579dc40787499da59114e113bd7c43a8ec2db",
+      "content": "C:\\Users\\supro\\.cache\\hyperframes\\history\\331b2cff-b5ce-4742-bea2-1c87cee37291\\blobs\\f0\\f0f5f83a2dbde03173b07d14a53579dc40787499da59114e113bd7c43a8ec2db"
+    },
+    "assets/raw.f32": {
+      "hash": "22d0145e8f298738865a49c2cf2d36232100a2f3cfa714b51e03678fca437a11",
+      "content": "C:\\Users\\supro\\.cache\\hyperframes\\history\\331b2cff-b5ce-4742-bea2-1c87cee37291\\blobs\\22\\22d0145e8f298738865a49c2cf2d36232100a2f3cfa714b51e03678fca437a11"
+    },
+    "assets/score.wav": {
+      "hash": "358601f6e5e6795026ff37daaafba590e2d9eb30cb1a336f7566adf63fcfdc98",
+      "content": "C:\\Users\\supro\\.cache\\hyperframes\\history\\331b2cff-b5ce-4742-bea2-1c87cee37291\\blobs\\35\\358601f6e5e6795026ff37daaafba590e2d9eb30cb1a336f7566adf63fcfdc98"
+    }
+  },
+  "revisions": {
+    "ceeff10e-1504-42c7-b1e6-107248dd3896": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1792957554285,
+      "endedAt": 1792957554304,
+      "files": {
+        "assets/scenes.js": {
+          "before": "C:\\Users\\supro\\.cache\\hyperframes\\history\\331b2cff-b5ce-4742-bea2-1c87cee37291\\blobs\\3f\\3f3cb3b8573c6b76869abbafd9ac4e52df88a16ae857cf9b330addd8387eed19",
+          "after": "C:\\Users\\supro\\.cache\\hyperframes\\history\\331b2cff-b5ce-4742-bea2-1c87cee37291\\blobs\\6c\\6c0f4e062458eba2fadaa93077634c26b9df756fcb3bf867d1714f8694ba7e8d"
+        },
+        "index.html": {
+          "before": "C:\\Users\\supro\\.cache\\hyperframes\\history\\331b2cff-b5ce-4742-bea2-1c87cee37291\\blobs\\c8\\c8056afa865c4a65c4d03efc9ef13448a1ad38b61c12197480f551209cd6af42",
+          "after": "C:\\Users\\supro\\.cache\\hyperframes\\history\\331b2cff-b5ce-4742-bea2-1c87cee37291\\blobs\\f4\\f41fd3d25276fc59aef5650ff87e1e3cb16f7290888e0bca9b0549de663f7005"
+        }
+      }
+    }
+  },
+  "checks": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "snapshots": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "renders": {
+    "latest": {
+      "id": "98237fb1-d5b2-4804-ac62-dfdb035acc3d",
+      "completedAt": 1792957773358,
+      "output": "D:\\stickman-story\\out\\store-hd\\ch3.mp4",
+      "status": "completed",
+      "revision": "ceeff10e-1504-42c7-b1e6-107248dd3896"
+    },
+    "retainedRevisions": [
+      "ceeff10e-1504-42c7-b1e6-107248dd3896"
+    ]
+  },
+  "pendingArtifactCleanup": []
+}

@@ -1,0 +1,171 @@
+{
+ "engine": "kokoro",
+ "total": 94.21425,
+ "sentences": [
+  {
+   "text": "Here is what nobody tells you about the dead.",
+   "start": 0.6,
+   "end": 3.1784583333333334
+  },
+  {
+   "text": "They do not hunt.",
+   "start": 3.478458333333333,
+   "end": 4.605125
+  },
+  {
+   "text": "They repeat.",
+   "start": 4.905125,
+   "end": 5.789416666666667
+  },
+  {
+   "text": "They show up around seven.",
+   "start": 6.089416666666667,
+   "end": 7.564541666666667
+  },
+  {
+   "text": "They lean on the shutter all day long.",
+   "start": 7.864541666666667,
+   "end": 9.799166666666666
+  },
+  {
+   "text": "Around nine at night, they drift away.",
+   "start": 10.099166666666667,
+   "end": 12.294125000000001
+  },
+  {
+   "text": "They shop the way they always shopped.",
+   "start": 12.594125,
+   "end": 14.628208333333333
+  },
+  {
+   "text": "Nights are quiet.",
+   "start": 14.928208333333334,
+   "end": 15.973541666666668
+  },
+  {
+   "text": "Nights were always quiet.",
+   "start": 16.273541666666667,
+   "end": 17.744458333333334
+  },
+  {
+   "text": "That is why you took this job.",
+   "start": 18.044458333333335,
+   "end": 19.831000000000003
+  },
+  {
+   "text": "So you keep to night hours.",
+   "start": 20.131,
+   "end": 21.758958333333332
+  },
+  {
+   "text": "After dark, the roof is yours.",
+   "start": 22.058958333333333,
+   "end": 23.9965
+  },
+  {
+   "text": "You cook up there on a camping stove from aisle 11.",
+   "start": 24.296499999999998,
+   "end": 27.42233333333333
+  },
+  {
+   "text": "Never indoors.",
+   "start": 27.72233333333333,
+   "end": 28.857666666666663
+  },
+  {
+   "text": "In a sealed building, a gas flame can kill you more quietly than they ever could.",
+   "start": 29.157666666666664,
+   "end": 33.918458333333334
+  },
+  {
+   "text": "On day four, the taps run dry.",
+   "start": 34.71845833333333,
+   "end": 36.751041666666666
+  },
+  {
+   "text": "No power means no pumps.",
+   "start": 37.05104166666666,
+   "end": 38.78579166666666
+  },
+  {
+   "text": "Drinking is easy: you have eight pallets of bottled water.",
+   "start": 39.085791666666665,
+   "end": 42.82925
+  },
+  {
+   "text": "The toilets are the problem.",
+   "start": 43.12925,
+   "end": 44.735708333333335
+  },
+  {
+   "text": "So it is one bucket, one bin bag, and a trip to aisle 13 for cat litter.",
+   "start": 45.03570833333333,
+   "end": 50.29045833333333
+  },
+  {
+   "text": "Turns out it was useful after all.",
+   "start": 50.59045833333333,
+   "end": 52.75883333333333
+  },
+  {
+   "text": "On day five, a car rolls into the staff lot.",
+   "start": 53.55883333333333,
+   "end": 56.47033333333333
+  },
+  {
+   "text": "It stops perfectly between the lines.",
+   "start": 56.77033333333333,
+   "end": 58.841458333333335
+  },
+  {
+   "text": "It is Rhea's.",
+   "start": 59.14145833333333,
+   "end": 60.107124999999996
+  },
+  {
+   "text": "She sits behind the wheel with the engine running until the tank is empty.",
+   "start": 60.407125,
+   "end": 64.99733333333333
+  },
+  {
+   "text": "She never gets out.",
+   "start": 65.29733333333333,
+   "end": 66.501875
+  },
+  {
+   "text": "By day eight, the driver's door hangs open and the seat is empty.",
+   "start": 66.801875,
+   "end": 70.90766666666666
+  },
+  {
+   "text": "On day nine, you are asleep on a pile of dog beds when the ceiling turns white.",
+   "start": 71.70766666666667,
+   "end": 76.68375
+  },
+  {
+   "text": "Every light blazes and every freezer roars.",
+   "start": 76.98375,
+   "end": 79.82683333333334
+  },
+  {
+   "text": "And out of every speaker, the store playlist at full volume.",
+   "start": 80.12683333333334,
+   "end": 83.861
+  },
+  {
+   "text": "The power is back.",
+   "start": 84.161,
+   "end": 85.32591666666667
+  },
+  {
+   "text": "Outside, 250 heads turn at once.",
+   "start": 85.62591666666667,
+   "end": 88.35070833333333
+  },
+  {
+   "text": "The main breaker sits in the back office, seventy yards away.",
+   "start": 88.65070833333334,
+   "end": 92.51425
+  }
+ ]
+}

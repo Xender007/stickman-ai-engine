@@ -1,0 +1,181 @@
+{
+ "engine": "kokoro",
+ "total": 99.69579166666666,
+ "sentences": [
+  {
+   "text": "Here is what the dead do.",
+   "start": 0.6,
+   "end": 2.075125
+  },
+  {
+   "text": "They do not hunt.",
+   "start": 2.375125,
+   "end": 3.5017916666666666
+  },
+  {
+   "text": "They repeat.",
+   "start": 3.801791666666667,
+   "end": 4.686083333333333
+  },
+  {
+   "text": "They arrive around seven.",
+   "start": 4.986083333333333,
+   "end": 6.405541666666666
+  },
+  {
+   "text": "They lean on the shutter all day.",
+   "start": 6.705541666666667,
+   "end": 8.454916666666668
+  },
+  {
+   "text": "But when the sun goes down and the air turns cold, they stop.",
+   "start": 8.754916666666666,
+   "end": 12.444541666666666
+  },
+  {
+   "text": "Not drift off.",
+   "start": 12.744541666666667,
+   "end": 13.846
+  },
+  {
+   "text": "Stop.",
+   "start": 14.146,
+   "end": 14.811916666666667
+  },
+  {
+   "text": "They stand in the lot like statues until morning.",
+   "start": 15.111916666666668,
+   "end": 18.19291666666667
+  },
+  {
+   "text": "You do not know why.",
+   "start": 18.492916666666666,
+   "end": 19.787333333333333
+  },
+  {
+   "text": "You write it on the wall anyway.",
+   "start": 20.087333333333333,
+   "end": 21.887125
+  },
+  {
+   "text": "So you work at night, and you live on the roof.",
+   "start": 22.687125,
+   "end": 25.139041666666667
+  },
+  {
+   "text": "You cook on a camping stove, never indoors.",
+   "start": 25.439041666666668,
+   "end": 28.373375000000003
+  },
+  {
+   "text": "In a sealed building, a gas flame will kill you more quietly than they ever could.",
+   "start": 28.673375,
+   "end": 33.459208333333336
+  },
+  {
+   "text": "On day four, the taps run dry.",
+   "start": 34.25920833333333,
+   "end": 36.29179166666667
+  },
+  {
+   "text": "You have eight pallets of bottled water, so drinking is easy.",
+   "start": 36.591791666666666,
+   "end": 40.32083333333333
+  },
+  {
+   "text": "The toilets are the problem.",
+   "start": 40.62083333333333,
+   "end": 42.227291666666666
+  },
+  {
+   "text": "One bucket, one bin bag, and a trip to aisle 13 for cat litter.",
+   "start": 42.52729166666666,
+   "end": 47.35879166666666
+  },
+  {
+   "text": "On day five, Rhea's van pulls into the staff lot.",
+   "start": 48.158791666666666,
+   "end": 51.206375
+  },
+  {
+   "text": "It stops perfectly between the lines.",
+   "start": 51.506375,
+   "end": 53.5775
+  },
+  {
+   "text": "The engine runs until the tank is empty.",
+   "start": 53.8775,
+   "end": 56.49020833333333
+  },
+  {
+   "text": "When you finally climb down, the driver's door is open and the seat is empty.",
+   "start": 56.79020833333333,
+   "end": 61.73229166666667
+  },
+  {
+   "text": "On the dashboard sits a child's drawing of a house.",
+   "start": 62.032291666666666,
+   "end": 64.92795833333334
+  },
+  {
+   "text": "Somebody has smashed the passenger window from the inside.",
+   "start": 65.22795833333333,
+   "end": 68.320875
+  },
+  {
+   "text": "Every night at 9:00, you hear it.",
+   "start": 69.120875,
+   "end": 70.88908333333333
+  },
+  {
+   "text": "Three knocks, a pause, three more.",
+   "start": 71.18908333333333,
+   "end": 73.08870833333333
+  },
+  {
+   "text": "It is not coming from the doors.",
+   "start": 73.38870833333333,
+   "end": 75.33645833333333
+  },
+  {
+   "text": "It is coming from the walk-in freezer.",
+   "start": 75.63645833333332,
+   "end": 77.63399999999999
+  },
+  {
+   "text": "On day nine, you are asleep on a pile of dog beds when the ceiling turns white.",
+   "start": 78.43399999999998,
+   "end": 83.41008333333332
+  },
+  {
+   "text": "Every light blazes and every freezer roars.",
+   "start": 83.71008333333332,
+   "end": 86.55316666666666
+  },
+  {
+   "text": "And from the speakers, the intercom wakes up.",
+   "start": 86.85316666666665,
+   "end": 89.54712499999998
+  },
+  {
+   "text": "Attention shoppers, says a voice.",
+   "start": 89.84712499999999,
+   "end": 91.782125
+  },
+  {
+   "text": "The store is now closing.",
+   "start": 92.08212499999999,
+   "end": 93.62345833333332
+  },
+  {
+   "text": "It says your name.",
+   "start": 93.92345833333333,
+   "end": 94.97099999999999
+  },
+  {
+   "text": "Outside, 250 heads turn at once.",
+   "start": 95.271,
+   "end": 97.99579166666666
+  }
+ ]
+}

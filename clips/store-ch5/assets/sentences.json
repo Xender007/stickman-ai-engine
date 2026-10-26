@@ -1,0 +1,206 @@
+{
+ "engine": "kokoro",
+ "total": 107.69391666666667,
+ "sentences": [
+  {
+   "text": "It buys you two days.",
+   "start": 0.6,
+   "end": 2.093166666666667
+  },
+  {
+   "text": "Then, on the twelfth night, somebody knocks on the fire exit.",
+   "start": 2.3931666666666667,
+   "end": 6.014291666666667
+  },
+  {
+   "text": "Three knocks, a pause, three more.",
+   "start": 6.314291666666667,
+   "end": 8.213916666666666
+  },
+  {
+   "text": "The dead do not knock.",
+   "start": 8.513916666666667,
+   "end": 9.956291666666667
+  },
+  {
+   "text": "There are four of them.",
+   "start": 10.256291666666666,
+   "end": 11.428125
+  },
+  {
+   "text": "A pickup truck, a tow chain, and a very simple plan.",
+   "start": 11.728124999999999,
+   "end": 15.01925
+  },
+  {
+   "text": "They saw the lights on day nine.",
+   "start": 15.319249999999998,
+   "end": 17.065916666666666
+  },
+  {
+   "text": "They know someone is inside.",
+   "start": 17.365916666666664,
+   "end": 19.121416666666665
+  },
+  {
+   "text": "And they know what is in here with you.",
+   "start": 19.421416666666662,
+   "end": 21.363874999999997
+  },
+  {
+   "text": "Problem four: the living.",
+   "start": 22.163874999999997,
+   "end": 23.768124999999998
+  },
+  {
+   "text": "You cannot fight four people.",
+   "start": 24.068125,
+   "end": 25.721791666666665
+  },
+  {
+   "text": "But you understand something they do not.",
+   "start": 26.021791666666665,
+   "end": 28.127875
+  },
+  {
+   "text": "If they tear that shutter off, 250 dead walk in right behind them.",
+   "start": 28.427875,
+   "end": 33.53633333333333
+  },
+  {
+   "text": "And then nobody has a supermarket.",
+   "start": 33.836333333333336,
+   "end": 35.98608333333333
+  },
+  {
+   "text": "So you do not open the door.",
+   "start": 36.28608333333334,
+   "end": 37.958333333333336
+  },
+  {
+   "text": "You open the store.",
+   "start": 38.25833333333334,
+   "end": 39.47208333333334
+  },
+  {
+   "text": "One rope and one bucket, lowered off the back of the roof at 1:30 in the morning.",
+   "start": 39.77208333333334,
+   "end": 44.90025000000001
+  },
+  {
+   "text": "The first fifteen tins are free.",
+   "start": 45.20025000000001,
+   "end": 47.12958333333334
+  },
+  {
+   "text": "After that, you trade.",
+   "start": 47.42958333333335,
+   "end": 48.70800000000001
+  },
+  {
+   "text": "Batteries, fuel, medicine, news.",
+   "start": 49.00800000000002,
+   "end": 51.01645833333335
+  },
+  {
+   "text": "You worked retail for five years.",
+   "start": 51.31645833333335,
+   "end": 53.311875000000015
+  },
+  {
+   "text": "You know how to handle difficult customers.",
+   "start": 53.61187500000002,
+   "end": 55.95383333333335
+  },
+  {
+   "text": "House rule, amended: nobody comes in, but the roof is open.",
+   "start": 56.253833333333354,
+   "end": 60.578666666666685
+  },
+  {
+   "text": "By day sixteen, there is a queue.",
+   "start": 61.37866666666669,
+   "end": 63.37762500000002
+  },
+  {
+   "text": "A woman with a baby, two old men with a wheelbarrow, and a girl on a bike who only ever asks for cat food.",
+   "start": 63.67762500000002,
+   "end": 70.93791666666668
+  },
+  {
+   "text": "On the seventeenth night at nine o'clock, something scratches at the staff entrance.",
+   "start": 71.23791666666669,
+   "end": 76.12475000000002
+  },
+  {
+   "text": "Metal on metal.",
+   "start": 76.42475000000003,
+   "end": 77.48645833333336
+  },
+  {
+   "text": "Someone is trying to fit a key in the lock.",
+   "start": 77.78645833333337,
+   "end": 79.98158333333338
+  },
+  {
+   "text": "It is Rhea.",
+   "start": 80.28158333333337,
+   "end": 81.13220833333337
+  },
+  {
+   "text": "She is starting her shift, but the lock is full of your broken key.",
+   "start": 81.43220833333338,
+   "end": 85.31775000000005
+  },
+  {
+   "text": "She works at it for an hour.",
+   "start": 85.61775000000004,
+   "end": 87.29895833333337
+  },
+  {
+   "text": "The next night, she is back.",
+   "start": 87.59895833333337,
+   "end": 89.0462916666667
+  },
+  {
+   "text": "She is never late.",
+   "start": 89.3462916666667,
+   "end": 90.54945833333336
+  },
+  {
+   "text": "On day twenty, the bucket comes up with a note in it.",
+   "start": 91.34945833333337,
+   "end": 94.35141666666671
+  },
+  {
+   "text": "Pencil, in a child's handwriting.",
+   "start": 94.6514166666667,
+   "end": 96.4892916666667
+  },
+  {
+   "text": "The men with the truck are done trading.",
+   "start": 96.7892916666667,
+   "end": 98.89758333333337
+  },
+  {
+   "text": "They are coming tonight.",
+   "start": 99.19758333333337,
+   "end": 100.4075416666667
+  },
+  {
+   "text": "They want all of it.",
+   "start": 100.7075416666667,
+   "end": 101.88508333333337
+  },
+  {
+   "text": "Please let us in.",
+   "start": 102.18508333333337,
+   "end": 103.3774166666667
+  },
+  {
+   "text": "House rule one says nobody comes in.",
+   "start": 103.6774166666667,
+   "end": 105.9939166666667
+  }
+ ]
+}

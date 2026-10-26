@@ -1,0 +1,161 @@
+{
+ "engine": "kokoro",
+ "total": 100.19591666666666,
+ "sentences": [
+  {
+   "text": "It buys you two days.",
+   "start": 0.6,
+   "end": 2.093166666666667
+  },
+  {
+   "text": "Then, on the twelfth night, a rope drops from the roof of the building next door.",
+   "start": 2.3931666666666667,
+   "end": 7.04175
+  },
+  {
+   "text": "Three people slide down it in white protective suits.",
+   "start": 7.34175,
+   "end": 10.440416666666668
+  },
+  {
+   "text": "They carry a clipboard, a thermometer, and a very simple plan.",
+   "start": 10.740416666666667,
+   "end": 14.608875
+  },
+  {
+   "text": "They know about the freezer.",
+   "start": 14.908875,
+   "end": 16.246
+  },
+  {
+   "text": "They have been tracking it for days.",
+   "start": 16.546,
+   "end": 18.250916666666665
+  },
+  {
+   "text": "Problem four: the living.",
+   "start": 19.050916666666666,
+   "end": 20.655166666666666
+  },
+  {
+   "text": "You cannot fight three people with suits and tools.",
+   "start": 20.955166666666667,
+   "end": 23.637291666666666
+  },
+  {
+   "text": "But you understand something they do not.",
+   "start": 23.937291666666667,
+   "end": 26.043375
+  },
+  {
+   "text": "If they cut the shutter, 250 dead walk in behind them.",
+   "start": 26.343375,
+   "end": 30.55241666666667
+  },
+  {
+   "text": "And then nobody has a supermarket.",
+   "start": 30.85241666666667,
+   "end": 33.00216666666667
+  },
+  {
+   "text": "So you do not open the door.",
+   "start": 33.80216666666667,
+   "end": 35.47441666666667
+  },
+  {
+   "text": "You open the store.",
+   "start": 35.774416666666674,
+   "end": 36.98816666666667
+  },
+  {
+   "text": "One rope, one bucket, lowered off the back of the roof at 1:30 in the morning.",
+   "start": 37.288166666666676,
+   "end": 42.296291666666676
+  },
+  {
+   "text": "The first fifteen tins are free.",
+   "start": 42.59629166666667,
+   "end": 44.525625000000005
+  },
+  {
+   "text": "After that, you trade: batteries, fuel, medicine, news.",
+   "start": 44.82562500000001,
+   "end": 48.487416666666675
+  },
+  {
+   "text": "You worked retail for five years.",
+   "start": 48.78741666666667,
+   "end": 50.782833333333336
+  },
+  {
+   "text": "You know how to handle difficult customers.",
+   "start": 51.08283333333334,
+   "end": 53.42479166666667
+  },
+  {
+   "text": "House rule one, amended: nobody comes in, but the roof is open.",
+   "start": 53.724791666666675,
+   "end": 58.421916666666675
+  },
+  {
+   "text": "By day sixteen, there is a queue.",
+   "start": 59.22191666666667,
+   "end": 61.22087500000001
+  },
+  {
+   "text": "A woman with a baby, two old men with a wheelbarrow, and a girl on a bike who only ever asks for cat food.",
+   "start": 61.520875000000004,
+   "end": 68.78116666666666
+  },
+  {
+   "text": "On the seventeenth night, you finally catch the thing that has been moving your tins.",
+   "start": 69.08116666666668,
+   "end": 73.836875
+  },
+  {
+   "text": "It is a small girl, nine years old, living in the ceiling.",
+   "start": 74.136875,
+   "end": 77.42379166666667
+  },
+  {
+   "text": "Her name is Mina.",
+   "start": 77.72379166666667,
+   "end": 78.95337500000001
+  },
+  {
+   "text": "She has been up there since before the lights went out.",
+   "start": 79.253375,
+   "end": 81.75158333333334
+  },
+  {
+   "text": "In her backpack, one enormous orange cat.",
+   "start": 82.05158333333334,
+   "end": 84.70562500000001
+  },
+  {
+   "text": "On day twenty, the bucket comes up with a note in it.",
+   "start": 85.50562500000001,
+   "end": 88.50758333333334
+  },
+  {
+   "text": "The people in white suits are done trading.",
+   "start": 88.80758333333334,
+   "end": 91.13025
+  },
+  {
+   "text": "They are coming tonight.",
+   "start": 91.43025,
+   "end": 92.64020833333333
+  },
+  {
+   "text": "They do not want the food.",
+   "start": 92.94020833333333,
+   "end": 94.41199999999999
+  },
+  {
+   "text": "They want whatever is behind the door that says do not open.",
+   "start": 94.712,
+   "end": 98.49591666666667
+  }
+ ]
+}

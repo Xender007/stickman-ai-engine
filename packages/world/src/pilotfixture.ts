@@ -58,7 +58,7 @@ export async function buildPilotScene(): Promise<PilotScene> {
   const shots: EnvShot[] = [
     { fromFrame: 0, toFrameExclusive: 150, camera: CAMERAS.wideRight },
     { fromFrame: 150, toFrameExclusive: 237, camera: CAMERAS.follow, follow: follow(0.9) },
-    { fromFrame: 237, toFrameExclusive: 288, camera: CAMERAS.wide }, // the impact, seen from the street
+    { fromFrame: 237, toFrameExclusive: 288, camera: CAMERAS.medium }, // the impact, close enough to read the damage
     { fromFrame: 288, toFrameExclusive: 390, camera: CAMERAS.follow, follow: follow(0.9) },
     { fromFrame: 390, toFrameExclusive: 480, camera: CAMERAS.landing },
     { fromFrame: 480, toFrameExclusive: total, camera: CAMERAS.follow, follow: follow(-0.9) },
@@ -89,6 +89,7 @@ export async function buildPilotScene(): Promise<PilotScene> {
           facing: s.facing,
           feetX: [k.lFoot[0], k.rFoot[0]],
           feetY: [k.lFoot[1], k.rFoot[1]],
+          planted: [s.planted.L, s.planted.R] as [boolean, boolean],
         },
       ];
     },

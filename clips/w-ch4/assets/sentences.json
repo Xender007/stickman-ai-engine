@@ -1,0 +1,181 @@
+{
+ "engine": "kokoro",
+ "total": 100.50454166666667,
+ "sentences": [
+  {
+   "text": "The main breaker is in the back office, seventy yards away.",
+   "start": 0.6,
+   "end": 4.378541666666666
+  },
+  {
+   "text": "You run it faster than you have ever run anything.",
+   "start": 4.678541666666666,
+   "end": 7.475499999999999
+  },
+  {
+   "text": "You are still ten steps short when the lights die on their own.",
+   "start": 7.775499999999999,
+   "end": 10.803749999999999
+  },
+  {
+   "text": "Thirty-five seconds of light, then darkness, then silence.",
+   "start": 11.103749999999998,
+   "end": 14.650041666666665
+  },
+  {
+   "text": "You did not touch the breaker.",
+   "start": 14.950041666666664,
+   "end": 16.517916666666665
+  },
+  {
+   "text": "Somebody else did.",
+   "start": 16.817916666666665,
+   "end": 18.024124999999998
+  },
+  {
+   "text": "You sit on the office floor with Rhea's envelope.",
+   "start": 18.824125,
+   "end": 21.648666666666664
+  },
+  {
+   "text": "It is day ten.",
+   "start": 21.948666666666664,
+   "end": 23.015416666666663
+  },
+  {
+   "text": "You swore to open it only as a last resort.",
+   "start": 23.315416666666664,
+   "end": 26.394374999999997
+  },
+  {
+   "text": "The power is gone, the crowd is gathering, and you are out of ideas.",
+   "start": 26.694374999999997,
+   "end": 31.107833333333332
+  },
+  {
+   "text": "This is the last resort.",
+   "start": 31.40783333333333,
+   "end": 32.96858333333333
+  },
+  {
+   "text": "You tear it open.",
+   "start": 33.26858333333333,
+   "end": 34.39841666666666
+  },
+  {
+   "text": "Inside, there is no letter.",
+   "start": 34.69841666666667,
+   "end": 36.23229166666667
+  },
+  {
+   "text": "Only a floor plan with one thing circled: a service tunnel under the freezer.",
+   "start": 36.532291666666666,
+   "end": 41.32425
+  },
+  {
+   "text": "And one line in her handwriting: Do not let them hear the cold.",
+   "start": 41.624249999999996,
+   "end": 45.584666666666664
+  },
+  {
+   "text": "You do not understand it yet.",
+   "start": 46.38466666666666,
+   "end": 48.01233333333333
+  },
+  {
+   "text": "You understand the crowd, though.",
+   "start": 48.31233333333333,
+   "end": 50.03891666666666
+  },
+  {
+   "text": "They are not leaning anymore.",
+   "start": 50.33891666666666,
+   "end": 51.94479166666666
+  },
+  {
+   "text": "They are pushing.",
+   "start": 52.244791666666664,
+   "end": 53.23116666666667
+  },
+  {
+   "text": "Problem three: the shutter.",
+   "start": 53.531166666666664,
+   "end": 55.04
+  },
+  {
+   "text": "It was built to stop one man with a crowbar.",
+   "start": 55.339999999999996,
+   "end": 57.74279166666666
+  },
+  {
+   "text": "Not 250 people.",
+   "start": 58.042791666666666,
+   "end": 59.898291666666665
+  },
+  {
+   "text": "By midnight, the steel has started to bow.",
+   "start": 60.19829166666666,
+   "end": 62.68995833333333
+  },
+  {
+   "text": "So you build a second wall.",
+   "start": 63.48995833333333,
+   "end": 65.03308333333332
+  },
+  {
+   "text": "Water pallets, a ton each, against the steel.",
+   "start": 65.33308333333332,
+   "end": 68.03841666666665
+  },
+  {
+   "text": "Shopping carts, nested and chained, thirty to a row.",
+   "start": 68.33841666666666,
+   "end": 71.544
+  },
+  {
+   "text": "But a wall only buys time.",
+   "start": 71.844,
+   "end": 73.61245833333332
+  },
+  {
+   "text": "You need them to leave.",
+   "start": 73.91245833333333,
+   "end": 75.27304166666667
+  },
+  {
+   "text": "Rhea's van is still in the lot.",
+   "start": 76.07304166666667,
+   "end": 77.83454166666667
+  },
+  {
+   "text": "In the staff locker room, you try the brass key from the regular's fist.",
+   "start": 78.13454166666666,
+   "end": 82.34470833333333
+  },
+  {
+   "text": "Locker twelve is Rhea's.",
+   "start": 82.64470833333333,
+   "end": 84.20325
+  },
+  {
+   "text": "Inside: her phone, a photograph of two kids, and the van's remote.",
+   "start": 84.50325,
+   "end": 88.98287499999999
+  },
+  {
+   "text": "You climb to the roof, aim the remote, and hold the panic button.",
+   "start": 89.28287499999999,
+   "end": 93.04116666666665
+  },
+  {
+   "text": "Down in the lot, the horn starts screaming.",
+   "start": 93.34116666666665,
+   "end": 95.69454166666665
+  },
+  {
+   "text": "Two hundred and fifty heads swing the other way.",
+   "start": 95.99454166666665,
+   "end": 98.80454166666665
+  }
+ ]
+}

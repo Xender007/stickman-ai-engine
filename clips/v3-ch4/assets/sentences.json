@@ -1,0 +1,161 @@
+{
+ "engine": "kokoro",
+ "total": 90.446125,
+ "sentences": [
+  {
+   "text": "The main breaker is in the back office, seventy yards away.",
+   "start": 0.6,
+   "end": 4.378541666666666
+  },
+  {
+   "text": "You run it faster than you have ever run anything.",
+   "start": 4.678541666666666,
+   "end": 7.475499999999999
+  },
+  {
+   "text": "You are still ten steps short when the lights die on their own.",
+   "start": 7.775499999999999,
+   "end": 10.803749999999999
+  },
+  {
+   "text": "Thirty-five seconds of light, then darkness, then silence.",
+   "start": 11.103749999999998,
+   "end": 14.650041666666665
+  },
+  {
+   "text": "You did not touch the breaker.",
+   "start": 14.950041666666664,
+   "end": 16.517916666666665
+  },
+  {
+   "text": "Somebody else did.",
+   "start": 16.817916666666665,
+   "end": 18.024124999999998
+  },
+  {
+   "text": "You sit on the office floor and finally open Rhea's envelope.",
+   "start": 18.824125,
+   "end": 22.97325
+  },
+  {
+   "text": "It is day ten.",
+   "start": 23.273249999999997,
+   "end": 24.339999999999996
+  },
+  {
+   "text": "Inside, there is no letter.",
+   "start": 24.639999999999997,
+   "end": 26.173874999999995
+  },
+  {
+   "text": "Only a floor plan with one thing circled: a service tunnel under the freezer.",
+   "start": 26.473874999999996,
+   "end": 31.26583333333333
+  },
+  {
+   "text": "And one line in her handwriting: Do not let them hear the cold.",
+   "start": 31.56583333333333,
+   "end": 35.52625
+  },
+  {
+   "text": "You do not understand it yet.",
+   "start": 36.326249999999995,
+   "end": 37.953916666666665
+  },
+  {
+   "text": "You understand the crowd, though.",
+   "start": 38.25391666666666,
+   "end": 39.98049999999999
+  },
+  {
+   "text": "They are not leaning anymore.",
+   "start": 40.280499999999996,
+   "end": 41.886374999999994
+  },
+  {
+   "text": "They are pushing.",
+   "start": 42.186375,
+   "end": 43.17275
+  },
+  {
+   "text": "Problem three: the shutter.",
+   "start": 43.47275,
+   "end": 44.98158333333333
+  },
+  {
+   "text": "It was built to stop one man with a crowbar.",
+   "start": 45.28158333333333,
+   "end": 47.684374999999996
+  },
+  {
+   "text": "Not 250 people.",
+   "start": 47.984375,
+   "end": 49.839875
+  },
+  {
+   "text": "By midnight, the steel has started to bow.",
+   "start": 50.139875,
+   "end": 52.63154166666667
+  },
+  {
+   "text": "So you build a second wall.",
+   "start": 53.43154166666667,
+   "end": 54.97466666666667
+  },
+  {
+   "text": "Water pallets, a ton each, against the steel.",
+   "start": 55.27466666666667,
+   "end": 57.980000000000004
+  },
+  {
+   "text": "Shopping carts, nested and chained, thirty to a row.",
+   "start": 58.28,
+   "end": 61.48558333333334
+  },
+  {
+   "text": "But a wall only buys time.",
+   "start": 61.785583333333335,
+   "end": 63.55404166666667
+  },
+  {
+   "text": "You need them to leave.",
+   "start": 63.85404166666667,
+   "end": 65.214625
+  },
+  {
+   "text": "Rhea's van is still in the lot.",
+   "start": 66.014625,
+   "end": 67.776125
+  },
+  {
+   "text": "In the staff locker room, you try the brass key from the regular's fist.",
+   "start": 68.07612499999999,
+   "end": 72.28629166666666
+  },
+  {
+   "text": "Locker twelve is Rhea's.",
+   "start": 72.58629166666665,
+   "end": 74.14483333333332
+  },
+  {
+   "text": "Inside: her phone, a photograph of two kids, and the van's remote.",
+   "start": 74.44483333333332,
+   "end": 78.92445833333332
+  },
+  {
+   "text": "You climb to the roof, aim the remote, and hold the panic button.",
+   "start": 79.22445833333332,
+   "end": 82.98274999999998
+  },
+  {
+   "text": "Down in the lot, the horn starts screaming.",
+   "start": 83.28274999999998,
+   "end": 85.63612499999998
+  },
+  {
+   "text": "Two hundred and fifty heads swing the other way.",
+   "start": 85.93612499999998,
+   "end": 88.74612499999998
+  }
+ ]
+}

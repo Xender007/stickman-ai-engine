@@ -36,26 +36,44 @@ export interface HarborFieldOptions {
   manning?: number;
 }
 
-/** Bake the surge: a reservoir at x in [-100, -60] released into a calm sea 1.2 m below the street. Deterministic. */
+/** Bake the Milestone 3/4 harbor surge (unchanged behaviour). */
 export function bakeHarborField(o: HarborFieldOptions): FloodField {
-  const surge = o.surgeEta ?? 3.5;
+  return bakeField({ bed: harborBed, tEnd: o.tEnd, surgeEta: o.surgeEta ?? 3.5, seaEta: -1.2, dtSample: o.dtSample, manning: o.manning, xEnd: 45, keepFrom: -30 });
+}
+
+export interface FieldOptions {
+  bed: (x: number) => number;
+  tEnd: number;
+  /** Surface elevation of the surge reservoir at x in [-100, -60]. */
+  surgeEta: number;
+  /** Calm sea surface elevation everywhere else. */
+  seaEta: number;
+  /** Right end of the domain (a wall). */
+  xEnd: number;
+  /** Left end of the region that is kept (the camera never sees further left). */
+  keepFrom: number;
+  dtSample?: number;
+  manning?: number;
+}
+
+/** Bake a surge over any terrain: a reservoir released into a calm sea, a 900 m sea so the far-wall reflection stays out of the first 200 s. */
+export function bakeField(o: FieldOptions): FloodField {
   const dx = 0.5;
   const solverX0 = -900;
-  const cells = 1890; // to x = 45; the long sea keeps the far-wall reflection out of the first 200 s
+  const cells = Math.round((o.xEnd - solverX0) / dx);
   const sim = new Swe1D({
     x0: solverX0,
     dx,
     cells,
-    bed: harborBed,
-    eta0: (x) => (x >= -100 && x < -60 ? surge : -1.2),
+    bed: o.bed,
+    eta0: (x) => (x >= -100 && x < -60 ? o.surgeEta : o.seaEta),
     manning: o.manning ?? 0.025,
     left: 'wall',
     right: 'wall',
   });
   const v0 = sim.volume();
 
-  // Keep only the region the camera can see and the objects can reach: x in [-30, 45].
-  const keepFrom = Math.round((-30 - solverX0) / dx);
+  const keepFrom = Math.round((o.keepFrom - solverX0) / dx);
   const keep = cells - keepFrom;
   const dtSample = o.dtSample ?? 0.1;
   const snapshots = Math.round(o.tEnd / dtSample) + 1;
@@ -82,10 +100,10 @@ export function bakeHarborField(o: HarborFieldOptions): FloodField {
 }
 
 /** Read a baked field as a FloodScenario. Surface elevation is interpolated (continuous across wet/dry fronts); depth follows from the exact ground. */
-export function fieldScenario(f: FloodField): FloodScenario {
+export function fieldScenario(f: FloodField, bed: (x: number) => number = harborBed, streetEnd = 34, seaProbeX = -6): FloodScenario {
   const tMax = (f.snapshots - 1) * f.dt;
   const xc = (i: number) => f.x0 + (i + 0.5) * f.dx;
-  const bedCell = Float64Array.from({ length: f.cells }, (_, i) => harborBed(xc(i)));
+  const bedCell = Float64Array.from({ length: f.cells }, (_, i) => bed(xc(i)));
   const snap = (t: number) => {
     const s = Math.min(f.snapshots - 1.000001, Math.max(0, t / f.dt));
     const i = Math.floor(s);
@@ -103,7 +121,7 @@ export function fieldScenario(f: FloodField): FloodScenario {
     const e = (ss: number) => etaCell(ss, i) * (1 - k) + etaCell(ss, i + 1) * k;
     return e(s) * (1 - ks) + e(s + 1) * ks;
   };
-  const depthAt = (x: number, t: number) => Math.max(0, etaAt(x, t) - harborBed(x));
+  const depthAt = (x: number, t: number) => Math.max(0, etaAt(x, t) - bed(x));
   const velocityAt = (x: number, t: number) => {
     if (depthAt(x, t) < 0.02) return 0;
     const { i: s, k: ks } = snap(t);
@@ -116,7 +134,7 @@ export function fieldScenario(f: FloodField): FloodScenario {
     const { i: s } = snap(t);
     // contiguous wet street from the quay; -Infinity if the quay edge is dry
     let last = -Infinity;
-    for (let i = streetFrom; i < f.cells && xc(i) <= 34; i++) {
+    for (let i = streetFrom; i < f.cells && xc(i) <= streetEnd; i++) {
       if (f.depth[s * f.cells + i] > 0.02) last = xc(i);
       else break;
     }
@@ -138,7 +156,7 @@ export function fieldScenario(f: FloodField): FloodScenario {
     return tFirst;
   };
   return {
-    level: (t) => Math.min(etaAt(-6, Math.min(t, tMax)), 99),
+    level: (t) => Math.min(etaAt(seaProbeX, Math.min(t, tMax)), 99),
     front: (t) => front(Math.min(t, tMax)),
     arrival,
     depthAt: (x, t) => depthAt(x, Math.min(t, tMax)),

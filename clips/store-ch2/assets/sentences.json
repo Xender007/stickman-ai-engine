@@ -1,0 +1,191 @@
+{
+ "engine": "kokoro",
+ "total": 100.103875,
+ "sentences": [
+  {
+   "text": "The fire exit is already drifting open.",
+   "start": 0.6,
+   "end": 3.28575
+  },
+  {
+   "text": "You haul it shut, but it will not stay.",
+   "start": 3.58575,
+   "end": 5.550208333333334
+  },
+  {
+   "text": "So you fetch the pallet jack.",
+   "start": 5.850208333333333,
+   "end": 7.439874999999999
+  },
+  {
+   "text": "One pallet of cat litter weighs nearly a ton.",
+   "start": 7.739875,
+   "end": 10.42475
+  },
+  {
+   "text": "You park four of them against the door.",
+   "start": 10.72475,
+   "end": 12.630958333333334
+  },
+  {
+   "text": "Next, the staff entrance.",
+   "start": 12.930958333333333,
+   "end": 14.38975
+  },
+  {
+   "text": "Eight employees hold a key to it.",
+   "start": 14.68975,
+   "end": 16.556166666666666
+  },
+  {
+   "text": "You turn yours in the lock until it snaps off.",
+   "start": 16.856166666666667,
+   "end": 19.506666666666668
+  },
+  {
+   "text": "Now nobody has one.",
+   "start": 19.806666666666665,
+   "end": 21.19845833333333
+  },
+  {
+   "text": "If Rhea comes back, she will have to knock.",
+   "start": 21.498458333333332,
+   "end": 23.645833333333332
+  },
+  {
+   "text": "Emergency lamps are rated for two hours.",
+   "start": 24.445833333333333,
+   "end": 27.105291666666666
+  },
+  {
+   "text": "Long enough for everyone to walk out.",
+   "start": 27.405291666666667,
+   "end": 29.49725
+  },
+  {
+   "text": "Nobody planned for somebody staying.",
+   "start": 29.79725,
+   "end": 31.847666666666665
+  },
+  {
+   "text": "When they fade, you learn something about supermarkets.",
+   "start": 32.147666666666666,
+   "end": 35.2365
+  },
+  {
+   "text": "They have no windows.",
+   "start": 35.5365,
+   "end": 36.88695833333333
+  },
+  {
+   "text": "With the shutter down, you have built yourself a cave.",
+   "start": 37.18695833333333,
+   "end": 40.323249999999994
+  },
+  {
+   "text": "Aisle 9: flashlights and batteries.",
+   "start": 41.12325,
+   "end": 43.55458333333333
+  },
+  {
+   "text": "You count those too.",
+   "start": 43.85458333333333,
+   "end": 44.99916666666667
+  },
+  {
+   "text": "Problem two: the rot.",
+   "start": 45.299166666666665,
+   "end": 46.69945833333333
+  },
+  {
+   "text": "Without power, a fridge keeps food safe for about five hours.",
+   "start": 46.99945833333333,
+   "end": 51.11391666666666
+  },
+  {
+   "text": "A full freezer, maybe three days.",
+   "start": 51.413916666666665,
+   "end": 53.57933333333333
+  },
+  {
+   "text": "After that, you are sealed in with three tons of meat, milk and fish.",
+   "start": 53.879333333333335,
+   "end": 57.976416666666665
+  },
+  {
+   "text": "But there is a walk-in freezer, a steel room with a rubber seal.",
+   "start": 58.27641666666667,
+   "end": 62.068083333333334
+  },
+  {
+   "text": "It was built to keep warm air out.",
+   "start": 62.36808333333334,
+   "end": 64.31779166666666
+  },
+  {
+   "text": "It keeps smells in just as well.",
+   "start": 64.61779166666668,
+   "end": 66.50366666666667
+  },
+  {
+   "text": "It takes you nine hours and a single cart.",
+   "start": 66.80366666666667,
+   "end": 69.19058333333334
+  },
+  {
+   "text": "You hold back the bread and the fruit.",
+   "start": 69.49058333333333,
+   "end": 71.51229166666667
+  },
+  {
+   "text": "For one week, you eat like a king.",
+   "start": 71.81229166666667,
+   "end": 73.65466666666667
+  },
+  {
+   "text": "Then you tape the seams and write on the door: house rule, nobody opens this, ever.",
+   "start": 73.95466666666667,
+   "end": 79.41429166666667
+  },
+  {
+   "text": "On the fourth morning, you climb onto the roof.",
+   "start": 80.21429166666667,
+   "end": 82.90004166666667
+  },
+  {
+   "text": "Three nights ago, the parking lot was empty.",
+   "start": 83.20004166666666,
+   "end": 85.89166666666667
+  },
+  {
+   "text": "Now there are 150 people standing in it.",
+   "start": 86.19166666666666,
+   "end": 89.27825
+  },
+  {
+   "text": "All of them face the doors.",
+   "start": 89.57825,
+   "end": 91.12958333333333
+  },
+  {
+   "text": "They are not hunting you.",
+   "start": 91.42958333333333,
+   "end": 92.73275
+  },
+  {
+   "text": "They do not even know you are here.",
+   "start": 93.03275,
+   "end": 94.92908333333332
+  },
+  {
+   "text": "It is Sunday morning.",
+   "start": 95.22908333333332,
+   "end": 96.45516666666666
+  },
+  {
+   "text": "They have come to do their shopping.",
+   "start": 96.75516666666665,
+   "end": 98.40387499999999
+  }
+ ]
+}

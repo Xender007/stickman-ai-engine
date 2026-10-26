@@ -1,0 +1,216 @@
+{
+ "engine": "kokoro",
+ "total": 111.80166666666666,
+ "sentences": [
+  {
+   "text": "At 9:00 that night, the knocking starts.",
+   "start": 0.6,
+   "end": 2.818
+  },
+  {
+   "text": "Three knocks, a pause, three more.",
+   "start": 3.118,
+   "end": 5.017625
+  },
+  {
+   "text": "This time, someone knocks back from the other side of the roof hatch.",
+   "start": 5.317625,
+   "end": 9.026958333333333
+  },
+  {
+   "text": "You look at Mina.",
+   "start": 9.326958333333334,
+   "end": 10.34375
+  },
+  {
+   "text": "Mina looks at you.",
+   "start": 10.64375,
+   "end": 11.745583333333334
+  },
+  {
+   "text": "You finally say it out loud: there is somebody in the freezer.",
+   "start": 12.045583333333335,
+   "end": 15.823625000000002
+  },
+  {
+   "text": "Why do the dead go still at night?",
+   "start": 16.623625,
+   "end": 18.493000000000002
+  },
+  {
+   "text": "Because the cold slows them down.",
+   "start": 18.913,
+   "end": 20.714291666666668
+  },
+  {
+   "text": "Why do they stay still in the freezer?",
+   "start": 21.014291666666665,
+   "end": 22.98725
+  },
+  {
+   "text": "Because Rhea went in there on night one.",
+   "start": 23.407249999999998,
+   "end": 25.37395833333333
+  },
+  {
+   "text": "She was bitten at the fire exit.",
+   "start": 25.67395833333333,
+   "end": 27.483624999999996
+  },
+  {
+   "text": "She locked herself in the one place that would keep her human.",
+   "start": 27.783624999999997,
+   "end": 31.135624999999997
+  },
+  {
+   "text": "The envelope was not a map for escaping.",
+   "start": 31.435624999999998,
+   "end": 34.011541666666666
+  },
+  {
+   "text": "It was a map to reach her.",
+   "start": 34.31154166666666,
+   "end": 35.69445833333333
+  },
+  {
+   "text": "Then you prepare for the suits.",
+   "start": 36.49445833333333,
+   "end": 38.119208333333326
+  },
+  {
+   "text": "You cannot stop three people.",
+   "start": 38.41920833333333,
+   "end": 40.111875
+  },
+  {
+   "text": "But you know what can.",
+   "start": 40.411874999999995,
+   "end": 41.56166666666666
+  },
+  {
+   "text": "Thirty alarm clocks from aisle 9, and the horn on the van.",
+   "start": 41.861666666666665,
+   "end": 45.80308333333333
+  },
+  {
+   "text": "Winding them takes one person thirty minutes.",
+   "start": 46.10308333333333,
+   "end": 48.67825
+  },
+  {
+   "text": "Two people can do it in fifteen.",
+   "start": 48.978249999999996,
+   "end": 50.85829166666666
+  },
+  {
+   "text": "You are starting to see the point of other people.",
+   "start": 51.15829166666666,
+   "end": 53.82445833333333
+  },
+  {
+   "text": "At four, the suits cut the shutter.",
+   "start": 54.62445833333333,
+   "end": 56.492374999999996
+  },
+  {
+   "text": "You drop the bucket one last time, straight into the lot.",
+   "start": 56.79237499999999,
+   "end": 60.00070833333333
+  },
+  {
+   "text": "Thirty clocks, all set for 4:10.",
+   "start": 60.300708333333326,
+   "end": 62.48054166666666
+  },
+  {
+   "text": "It is the loudest thing this city has heard in a month.",
+   "start": 62.78054166666666,
+   "end": 65.59158333333332
+  },
+  {
+   "text": "Every dead thing for a mile turns toward it.",
+   "start": 65.89158333333333,
+   "end": 68.34729166666666
+  },
+  {
+   "text": "The suits do the smart thing.",
+   "start": 68.64729166666666,
+   "end": 70.262
+  },
+  {
+   "text": "They drop their tools and run.",
+   "start": 70.562,
+   "end": 72.23091666666666
+  },
+  {
+   "text": "The noise goes with them.",
+   "start": 72.53091666666667,
+   "end": 73.974125
+  },
+  {
+   "text": "So does the crowd.",
+   "start": 74.274125,
+   "end": 75.45479166666667
+  },
+  {
+   "text": "By sunrise, the lot is empty.",
+   "start": 75.75479166666666,
+   "end": 77.7975
+  },
+  {
+   "text": "Day 28.",
+   "start": 78.5975,
+   "end": 79.625125
+  },
+  {
+   "text": "You open the walk-in freezer.",
+   "start": 79.925125,
+   "end": 81.61104166666667
+  },
+  {
+   "text": "Frost pours out across the floor.",
+   "start": 81.91104166666666,
+   "end": 83.87625
+  },
+  {
+   "text": "Rhea sits against the back wall, pale, alive, her eyes open.",
+   "start": 84.17625,
+   "end": 88.25358333333332
+  },
+  {
+   "text": "How long, she whispers.",
+   "start": 88.55358333333334,
+   "end": 89.94729166666667
+  },
+  {
+   "text": "You tell her.",
+   "start": 90.24729166666667,
+   "end": 91.07954166666667
+  },
+  {
+   "text": "She looks past you at the dark store, and the intercom crackles above you.",
+   "start": 91.37954166666667,
+   "end": 95.67966666666666
+  },
+  {
+   "text": "Attention shoppers, says Rhea's own voice, recorded on night one.",
+   "start": 95.97966666666667,
+   "end": 99.81779166666668
+  },
+  {
+   "text": "Do not turn the power back on.",
+   "start": 100.11779166666668,
+   "end": 101.75083333333335
+  },
+  {
+   "text": "Outside, the sun is rising.",
+   "start": 102.55083333333334,
+   "end": 104.22920833333335
+  },
+  {
+   "text": "The temperature is rising with it.",
+   "start": 104.52920833333334,
+   "end": 106.50166666666668
+  }
+ ]
+}

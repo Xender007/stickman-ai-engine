@@ -3,3 +3,12 @@ out
 .env
 public/episodes
 .cache
+
+# generated videos/audio and the supermarket story stay local
+*.mp4
+*.mov
+*.webm
+clips/**/assets/*.wav
+clips/**/assets/*.f32
+clips/**/assets/*.mp3
+story/supermarket/

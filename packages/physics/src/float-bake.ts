@@ -18,6 +18,27 @@ export interface FloatBody {
   density: number;
   /** false = the body does not feel the flow (a parked, braked car in this slice). */
   floats: boolean;
+  /** Depth lane (default hero). Bodies only collide with bodies and statics in the same lane. */
+  lane?: 'front' | 'hero';
+}
+
+/** A fixed obstacle (wall, post) in a lane. x, y are the centre. */
+export interface StaticBox {
+  /** Name used in impact events (e.g. "gantry_post_1"). */
+  id?: string;
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+  lane: 'front' | 'hero';
+}
+
+/** The ground the bodies stand on: a street plane through x = 0 with a slope, a building wall, and an optional sea floor. */
+export interface GroundSpec {
+  bed: (x: number) => number;
+  slope: number;
+  wallX: number;
+  seaFloorY?: number;
 }
 
 export interface FloatPose {
@@ -44,7 +65,7 @@ export interface FloatBake {
  * Documented limits: no torque from offset buoyancy (angular damping stands in), vertical added-mass is ignored, bodies with
  * `floats: false` feel no water force at all (vehicle_flooding stays a planned capability).
  */
-export async function bakeFloodBodies(opts: { flood: FloodScenario; tEnd: number; sampleDt?: number; stepSeconds?: number; bodies: FloatBody[]; dragCd?: number }): Promise<FloatBake> {
+export async function bakeFloodBodies(opts: { flood: FloodScenario; tEnd: number; sampleDt?: number; stepSeconds?: number; bodies: FloatBody[]; dragCd?: number; ground?: GroundSpec; statics?: StaticBox[] }): Promise<FloatBake> {
   await initPhysics();
   const dt = opts.stepSeconds ?? 1 / 120;
   const sampleDt = opts.sampleDt ?? 1 / 60;
@@ -54,18 +75,28 @@ export async function bakeFloodBodies(opts: { flood: FloodScenario; tEnd: number
   const world = new RAPIER.World({ x: 0, y: -9.81, z: 0 });
   world.timestep = dt;
   const queue = new RAPIER.EventQueue(true);
-  const slope = Math.atan(STREET_SLOPE);
+  const g: GroundSpec = opts.ground ?? { bed: harborBed, slope: STREET_SLOPE, wallX: 34 };
+  const slope = Math.atan(g.slope);
   const ground = world.createRigidBody(RAPIER.RigidBodyDesc.fixed().setRotation({ x: 0, y: 0, z: Math.sin(slope / 2), w: Math.cos(slope / 2) }));
   world.createCollider(RAPIER.ColliderDesc.cuboid(500, 0.5, 5).setTranslation(500, -0.5, 0).setFriction(0.8), ground);
+  // The building line closing the street (the field's bed rises there).
+  const fixed = world.createRigidBody(RAPIER.RigidBodyDesc.fixed());
+  world.createCollider(RAPIER.ColliderDesc.cuboid(0.5, 6, 5).setTranslation(g.wallX + 0.5, 6, 0).setFriction(0.5), fixed);
+  if (g.seaFloorY !== undefined) world.createCollider(RAPIER.ColliderDesc.cuboid(200, 0.5, 5).setTranslation(-200, g.seaFloorY - 0.5, 0).setFriction(0.6), fixed);
+  // Lane-specific obstacles: a thin collider at the lane's depth so only bodies in that lane can touch it.
+  const staticByHandle = new Map<number, string>();
+  (opts.statics ?? []).forEach((st, i) => {
+    const c = world.createCollider(RAPIER.ColliderDesc.cuboid(st.w / 2, st.h / 2, 0.3).setTranslation(st.x, st.y, laneZ(st.lane)).setFriction(0.5).setRestitution(0.2).setActiveEvents(RAPIER.ActiveEvents.COLLISION_EVENTS), fixed);
+    staticByHandle.set(c.handle, st.id ?? `static_${i}`);
+  });
 
-  // The building line closing the street at x = 34 (the field's bed rises there).
-  world.createCollider(RAPIER.ColliderDesc.cuboid(0.5, 6, 5).setTranslation(34.5, 6, 0).setFriction(0.5), ground);
-
+  // A floating body that starts in water starts at its floating draft, not on the sea floor.
+  const startFloat = (b: FloatBody) => (b.floats && opts.flood.depthAt(b.x, 0) > b.h ? opts.flood.etaAt(b.x, 0) - (b.density / RHO_WATER) * b.h + b.h / 2 : -Infinity);
   const sim = opts.bodies.map((b) => {
     const mass = b.density * b.w * b.h * b.thickness;
     const body = world.createRigidBody(
       RAPIER.RigidBodyDesc.dynamic()
-        .setTranslation(b.x, harborBed(b.x) + b.h / 2 + 0.0005, laneZ('hero'))
+        .setTranslation(b.x, Math.max(g.bed(b.x) + b.h / 2 + 0.0005, startFloat(b)), laneZ(b.lane ?? 'hero'))
         .enabledTranslations(true, true, false)
         .enabledRotations(false, false, true)
         .setAngularDamping(3),
@@ -122,6 +153,17 @@ export async function bakeFloodBodies(opts: { flood: FloodScenario; tEnd: number
       if (!started) return;
       const a = byHandle.get(h1);
       const b = byHandle.get(h2);
+      // a body against a fixed obstacle (post, wall): the impulse is the body's own momentum change
+      const stName = staticByHandle.get(h1) ?? staticByHandle.get(h2);
+      const body = a ?? b;
+      if (stName && body && !(a && b)) {
+        const key = body.spec.id + '|' + stName;
+        if (hit.has(key)) return;
+        hit.add(key);
+        const closing = Math.abs(preV.get(body.spec.id) ?? 0);
+        if (closing > 0.2) impacts.push({ t: t + dt, impulse: body.mass * closing * 1.1, closingSpeed: closing, a: body.spec.id, b: stName });
+        return;
+      }
       if (!a || !b) return;
       const key = [a.spec.id, b.spec.id].sort().join('|');
       if (hit.has(key)) return;
